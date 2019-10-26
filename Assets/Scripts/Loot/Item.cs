@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public Image Skin;
+    public Sprite Skin;
     public bool isEquiped = false;
     public string nameItem;
     public string description;
+    public int damage;
+    public float speedAttack;
     public int scarcity;
     private GameObject player;
     // Start is called before the first frame update
@@ -23,9 +24,10 @@ public class Item : MonoBehaviour
         
     }
     
-    void OnTriggerEnter() {
-        Debug.Log("Coucou");
-        if (isEquiped == false)
+    void OnTriggerEnter(Collider Col) {
+        if (isEquiped == false && Col.gameObject.tag == "Player") {
+            Debug.Log("Coucou");
             player.GetComponent<Inventary>().PickUp(gameObject);
+        }
     }
 }
