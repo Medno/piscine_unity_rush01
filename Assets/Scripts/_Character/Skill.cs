@@ -6,8 +6,9 @@ public class Skill : MonoBehaviour
 {
 	public int level = 1;
 	public int maxLevel = 5;
+	public string skillName = "Skill";
 	public skillType type;
-    public readonly string tooltip = "";
+    [TextArea] public string tooltip = "";
 	public enum skillType
 	{
 		Active,

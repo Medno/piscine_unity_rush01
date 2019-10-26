@@ -5,16 +5,20 @@ using UnityEngine;
 public class UserInput : MonoBehaviour
 {
 	private PlayerController player;
-
 	public bool canControl = true;
-	// Start is called before the first frame update
+	public static UserInput Instance
+	{
+		get { return s_Instance; }
+	}
+
+	protected static UserInput s_Instance;
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 	}
 
 	// Update is called once per frame
-	void FixedUpdate()
+	void Update()
 	{
 		if (canControl)
 		{
@@ -39,8 +43,10 @@ public class UserInput : MonoBehaviour
 				player.TriggerSkill(2);
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 				player.TriggerSkill(3);
-			if (Input.GetKeyDown(KeyCode.Alpha5))
-				player.TriggerSkill(4);
+			if (Input.GetKeyDown(KeyCode.O))
+				player.makeInvincible();
+			if (Input.GetKeyDown(KeyCode.P))
+				player.forceLevelUp();
 		}
 	}
 }

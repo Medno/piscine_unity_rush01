@@ -88,7 +88,6 @@ public class SeekerAI : MonoBehaviour
 		}
 		state = enemyStates.dead;
 		player.GetComponent<Hero>().GainXP(enemy.data.xp);
-		gameObject.GetComponent<EnemyLoot>().Loot();
 		StartCoroutine(SinkRoutine());
 	}
 

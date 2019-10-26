@@ -9,7 +9,7 @@ public class ActiveSkill : Skill
 	{ }
 	[SerializeField] protected ActivateEvent OnSkillActivated = null;
 
-	[SerializeField] protected ParticleSystem effectParticle;
+	[SerializeField] protected GameObject effectPrefab;
 	[SerializeField] protected activeSkillType activeType;
 
 	[SerializeField] protected float cooldown = 0;
@@ -19,7 +19,7 @@ public class ActiveSkill : Skill
 	public GameObject user;
 	public GameObject target;
 
-	public void Update()
+	public virtual void Update()
 	{
 		if (debug_activateSkill)
 		{
@@ -33,11 +33,11 @@ public class ActiveSkill : Skill
 		Ranged,
 		Aura
 	}
-	public void Activate()
+	public virtual void Activate()
 	{
+		if (nextUseTime < Time.time)
+			return;
 		nextUseTime = Time.time + cooldown;
 		OnSkillActivated.Invoke(this);
-		TriggerEffect();
 	}
-	public virtual void TriggerEffect() {}
 }

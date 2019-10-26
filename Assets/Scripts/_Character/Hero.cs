@@ -20,24 +20,25 @@ public class Hero : Character
 	[SerializeField] private int skillPoints = 0;
 	[SerializeField] private int skillPointsPerLevel = 0;
 	public ActiveSkill[] activeSkills;
-    public PassiveSkill[] passiveSkills;
-
-    private void Start()
+	public PassiveSkill[] passiveSkills;
+	public int damage = 0;
+	private void Start()
 	{
 		/* temporary */
 		foreach (ActiveSkill heroSkill in activeSkills)
 		{
 			heroSkill.user = this.gameObject;
 		}
-        foreach (PassiveSkill heroSkill in passiveSkills)
-        {
-            heroSkill.user = this.gameObject;
-        }
-    }
+		foreach (PassiveSkill heroSkill in passiveSkills)
+		{
+			heroSkill.user = this.gameObject;
+		}
+	}
 
 	public void LevelUp()
 	{
 		OnLevelUp.Invoke(this);
+		data.level += 1;
 		attributePoints += attributePointsPerLevel;
 		skillPoints += skillPointsPerLevel;
 	}
@@ -53,5 +54,28 @@ public class Hero : Character
 			data.xpToNextLevel *= 2;
 			LevelUp();
 		}
+	}
+
+	public void Equip(Equippable item)
+	{
+		data.damageBoost += item.damage;
+		data.armor += item.armor;
+		data.agility += item.evasion;
+		if (item.type == Equippable.EquipType.weapon)
+			data.attackSpeed = item.attackSpeed;
+	}
+
+	public void Unequip(Equippable item)
+	{
+		data.damageBoost -= item.damage;
+		data.armor -= item.armor;
+		data.agility -= item.evasion;
+		if (item.type == Equippable.EquipType.weapon)
+			data.attackSpeed = 1;
+	}
+	public void SwitchEquips(Equippable oldEquip, Equippable newEquip)
+	{
+		Unequip(oldEquip);
+		Equip(newEquip);
 	}
 }

@@ -36,4 +36,28 @@ public class PassiveBuffSkill : PassiveSkill
                 }
         }
     }
+
+	public override void Desactivate()
+	{
+		switch (buffType)
+		{
+			case BuffType.strength:
+				{
+					user.GetComponent<CharacterData>().strength -= currentBuff;
+					currentBuff = 0;
+					break;
+				}
+			case BuffType.armor:
+				{
+					user.GetComponent<CharacterData>().armor += buffAmount;
+					break;
+				}
+			case BuffType.evasion:
+				{
+					user.GetComponent<CharacterData>().agility -= currentBuff;
+					currentBuff = 0;
+					break;
+				}
+		}
+	}
 }

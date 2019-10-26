@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : Equippable
 {
     public Sprite Skin;
     public bool isEquiped = false;
     public string nameItem;
     public string description;
-    public int damage;
-    public float speedAttack;
     public int scarcity;
     private GameObject player;
     // Start is called before the first frame update

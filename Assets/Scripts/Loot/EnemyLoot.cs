@@ -12,6 +12,7 @@ public class EnemyLoot : MonoBehaviour
     public int legendaryChance = 5;
     public ItemList listItem;
     public GameObject player;
+
     void Awake()
     {
     }

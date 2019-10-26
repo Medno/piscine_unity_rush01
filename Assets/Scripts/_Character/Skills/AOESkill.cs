@@ -6,8 +6,4 @@ public class AOESkill : ActiveSkill
 {
 	private float AOERadius;
 	public float damage;
-	public override void TriggerEffect()
-	{
-
-	}
 }

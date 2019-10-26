@@ -83,4 +83,9 @@ public class Damageable : MonoBehaviour
 	{
 		invulnerable = false;
 	}
+
+	public void toggleInvulnerability()
+	{
+		invulnerable = invulnerable ? false : true;
+	}
 }

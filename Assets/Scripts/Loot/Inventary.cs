@@ -45,6 +45,7 @@ public class Inventary : MonoBehaviour
             obj.transform.localEulerAngles = new Vector3(180, 0, 90);
             equipedWeapon = obj;
             ownedItems.Remove(obj);
+			player.GetComponent<Hero>().Equip(item);
         }
     }
     public void Unequip() {
@@ -55,7 +56,8 @@ public class Inventary : MonoBehaviour
             equipedWeapon.SetActive(false);
             // equipedWeapon.hideFlags = HideFlags.HideInHierarchy;
             equipedWeapon = null;
-        }
+			player.GetComponent<Hero>().Unequip(item);
+		}
     }
     public void Drop(GameObject obj) {
         // obj.hideFlags = HideFlags.None;
