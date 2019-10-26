@@ -8,14 +8,15 @@ public class Skill : MonoBehaviour
 {
 	public int level = 0;
 	public int maxLevel = 5;
+	public string skillName = "Skill";
 	public skillType type;
-    public readonly string tooltip = "";
-	public bool isLocked = true;
-	public Button		skillButton;
-	[SerializeField] public GameObject	levelBox;
-	[SerializeField] public TextMeshProUGUI		levelText;
-	[SerializeField] public Skill	nextSkill;
-	[SerializeField] private Hero	hero;
+    [TextArea] public string tooltip = "";
+		public bool isLocked = true;
+		public Button		skillButton;
+		[SerializeField] public GameObject	levelBox;
+		[SerializeField] public TextMeshProUGUI		levelText;
+		[SerializeField] public Skill	nextSkill;
+		[SerializeField] private Hero	hero;
 
 	public enum skillType
 	{

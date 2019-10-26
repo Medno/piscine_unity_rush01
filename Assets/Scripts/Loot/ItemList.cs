@@ -5,4 +5,5 @@ using UnityEngine;
 public class ItemList : MonoBehaviour
 {
     public List<GameObject> prefabs;
+    public List<GameObject> spawnedItems;
 }

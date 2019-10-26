@@ -1086,6 +1086,7 @@ GameObject:
   - component: {fileID: 216535019256397811}
   - component: {fileID: 6707606426227863259}
   - component: {fileID: 4752518136633259191}
+  - component: {fileID: 409928039264815842}
   m_Layer: 0
   m_Name: Lambent_Female
   m_TagString: enemy
@@ -1224,6 +1225,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 409928039264815842}
+        m_MethodName: Loot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   disableOnDeath: 0
@@ -1251,6 +1263,7 @@ MonoBehaviour:
   xp: 5
   xpToNextLevel: 100
   credits: 0
+  attackSpeed: 1
 --- !u!114 &4752518136633259191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,6 +1277,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
+--- !u!114 &409928039264815842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817439483759236213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b15eead1517c407c96a4abf4f51f4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceOfLooting: 50
+  rareChance: 20
+  veryRareChance: 15
+  epicChance: 10
+  legendaryChance: 5
+  listItem: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &8817439483759236215
 GameObject:
   m_ObjectHideFlags: 0

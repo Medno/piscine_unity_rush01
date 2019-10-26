@@ -51,7 +51,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectParticle: {fileID: 0}
+  effectPrefab: {fileID: 1710630864473985781, guid: 11a4ca92eb6d04e47b98ef2b67a9cd62,
+    type: 3}
   activeType: 0
   cooldown: 0
   cost: 0
@@ -60,3 +61,4 @@ MonoBehaviour:
   user: {fileID: 0}
   target: {fileID: 0}
   healAmount: 5
+  isPercentageBased: 0

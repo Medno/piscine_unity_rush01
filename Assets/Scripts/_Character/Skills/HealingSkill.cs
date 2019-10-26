@@ -8,9 +8,11 @@ public class HealingSkill : ActiveSkill
 	public int healAmount = 1;
     public bool isPercentageBased = false;
 
-    public override void TriggerEffect()
+    public override void Activate()
 	{
+		base.Activate();
         Damageable userDamageable = user.GetComponent<Damageable>();
         userDamageable.GainHealth(isPercentageBased ? (userDamageable.currentHealth / userDamageable.maxHealth) * (100 + healAmount) : healAmount);
+		Instantiate(effectPrefab, user.transform);
 	}
 }

@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
 			float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 			if (distanceToTarget <= attackRadius)
 			{
+				animator.speed = character.data.attackSpeed;
 				if (Time.time > nextAttackTime)
 				{
 					animator.SetBool("attack", true);
@@ -61,6 +62,10 @@ public class PlayerController : MonoBehaviour
 					agent.ResetPath();
 					nextAttackTime = Time.time + attackDelay;
 				}
+			}
+			else
+			{
+				animator.speed = 1;
 			}
 		}
 	}
@@ -121,5 +126,14 @@ public class PlayerController : MonoBehaviour
 		agent.isStopped = true;
 		agent.ResetPath();
 		target = null;
+	}
+	// CHEATS
+	public void forceLevelUp()
+	{
+		character.LevelUp();
+	}
+	public void makeInvincible()
+	{
+		GetComponent<Damageable>().toggleInvulnerability();
 	}
 }

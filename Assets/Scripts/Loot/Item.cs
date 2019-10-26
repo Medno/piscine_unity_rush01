@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public class Item : Equippable
 {
-    public Image Skin;
+    public Sprite Skin;
     public bool isEquiped = false;
     public string nameItem;
     public string description;
@@ -23,9 +22,10 @@ public class Item : MonoBehaviour
         
     }
     
-    void OnTriggerEnter() {
-        Debug.Log("Coucou");
-        if (isEquiped == false)
+    void OnTriggerEnter(Collider Col) {
+        if (isEquiped == false && Col.gameObject.tag == "Player") {
+            Debug.Log("Coucou");
             player.GetComponent<Inventary>().PickUp(gameObject);
+        }
     }
 }

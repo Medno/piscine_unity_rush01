@@ -7,12 +7,12 @@ public class Inventary : MonoBehaviour
     public List<GameObject> ownedItems;
     public GameObject equipedWeapon;
     private GameObject player;
-    private List<GameObject> prefabs;
+    private List<GameObject> spawnedItems;
     // Start is called before the first frame update
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        prefabs = GameObject.FindGameObjectWithTag("ItemList").GetComponent<ItemList>().prefabs;
+        spawnedItems = GameObject.FindGameObjectWithTag("ItemList").GetComponent<ItemList>().spawnedItems;
     }
 
     // Update is called once per frame
@@ -28,38 +28,42 @@ public class Inventary : MonoBehaviour
     public void PickUp(GameObject obj) {
         Item item = obj.GetComponent<Item>();
         if (ownedItems.Count < 12) {
-            ownedItems.Add(prefabs.Find(prefab => prefab.name == obj.name));
-            Destroy(obj);
+            ownedItems.Add(obj);
+            obj.SetActive(false);
+            // obj.hideFlags = HideFlags.HideInHierarchy;
         }
     }
     public void Equip(GameObject obj) {
         Item item = obj.GetComponent<Item>();
-        if (item.isEquiped == false) {
-            GameObject weapon = Instantiate(obj);
-            weapon.name = obj.name;
-            item = weapon.GetComponent<Item>();
+        if (item.isEquiped == false && equipedWeapon == null) {
+            obj.SetActive(true);
+            // obj.hideFlags = HideFlags.None;
+            item = obj.GetComponent<Item>();
             item.isEquiped = true;
-            weapon.transform.SetParent(GameObject.FindGameObjectWithTag("rightHand").transform);
-            weapon.transform.localPosition = new Vector3(0, 0, 0);
-            weapon.transform.localEulerAngles = new Vector3(180, 0, 90);
-            equipedWeapon = weapon;
+            obj.transform.SetParent(GameObject.FindGameObjectWithTag("rightHand").transform);
+            obj.transform.localPosition = new Vector3(0, 0, 0);
+            obj.transform.localEulerAngles = new Vector3(180, 0, 90);
+            equipedWeapon = obj;
             ownedItems.Remove(obj);
+			player.GetComponent<Hero>().Equip(item);
         }
     }
     public void Unequip() {
         Item item = equipedWeapon.GetComponent<Item>();
         if (item.isEquiped == true) {
             item.isEquiped = false;
-            ownedItems.Add(prefabs.Find(prefab => prefab.name == equipedWeapon.name));
-            Destroy(equipedWeapon);
+            ownedItems.Add(equipedWeapon);
+            equipedWeapon.SetActive(false);
+            // equipedWeapon.hideFlags = HideFlags.HideInHierarchy;
             equipedWeapon = null;
-        }
+			player.GetComponent<Hero>().Unequip(item);
+		}
     }
     public void Drop(GameObject obj) {
-        GameObject dropedItem;
-        dropedItem = Instantiate(obj, player.transform.position, new Quaternion(0,0,0,0));
-        dropedItem.name = prefabs.Find(prefab => prefab.name == obj.name).name;
-        GeometryExtensions.SetPositionY(dropedItem.transform, dropedItem.transform.position.y + 0.3f);
+        // obj.hideFlags = HideFlags.None;
+        obj.SetActive(true);
+        obj.transform.position = player.transform.position;
+        GeometryExtensions.SetPositionY(obj.transform, obj.transform.position.y + 0.3f);
         ownedItems.Remove(obj);   
     }
 }
