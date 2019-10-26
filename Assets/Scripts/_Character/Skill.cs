@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Skill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public int level = 1;
+	public int maxLevel = 5;
+	public skillType type;
+    public readonly string tooltip = "";
+	public enum skillType
+	{
+		Active,
+		Passive,
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public virtual void LevelUp()
+	{}
 }
