@@ -33,6 +33,8 @@ public class Hero : Character
         {
             heroSkill.user = this.gameObject;
         }
+		Debug.Log(skillPoints);
+
     }
 
 	public void LevelUp()
@@ -54,4 +56,8 @@ public class Hero : Character
 			LevelUp();
 		}
 	}
+	public void UseTalentPoint() {
+		skillPoints--;
+	}
+	public int GetSkillsPoints() { return skillPoints; }
 }
