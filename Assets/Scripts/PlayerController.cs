@@ -10,10 +10,30 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float attackDelay = 3;
 	[SerializeField] private float nextAttackTime = 0;
 
+	private static CharacterController _instance;
 	private Animator animator;
 	private NavMeshAgent agent;
 	private Hero character;
 
+	//public static PlayerController instance
+	//{
+	//	get
+	//	{
+	//		if (PlayerController._instance == null)
+	//		{
+	//			PlayerController._instance = UnityEngine.Object.FindObjectOfType<PlayerController>();
+	//			if (PlayerController._instance == null)
+	//			{
+	//				UnityEngine.Debug.LogError("Couldn't find a Hero, make sure one exists in the scene.");
+	//			}
+	//			else
+	//			{
+	//				UnityEngine.Object.DontDestroyOnLoad(PlayerController._instance.gameObject);
+	//			}
+	//		}
+	//		return (PlayerController._instance);
+	//	}
+	//}
 	private void Start()
 	{
 		character = GetComponent<Hero>();
