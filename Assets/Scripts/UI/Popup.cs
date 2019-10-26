@@ -1,28 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Popup : MonoBehaviour
 {
-    public GameObject   popUp;
-    void Start()
-    {
-
-    }
-    void OnMouseEnter() {
-        Debug.Log("Selecting item");
-        popUp.SetActive(true);
-        // popUp.rectTransform.anchoredPosition = Input.mousePosition;
-
-    }
-    void OnMouseExit() {
-        Debug.Log("Quitting selection item");
-        popUp.SetActive(false);
-    }
-    void Update()
-    {
-        if (popUp.activeSelf)
-            popUp.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
-
+    public Image    itemImg;
+    public Text     itemName;
+    public Text     itemDetails;
+    public void SetItemDetails(Image img, string _itemName, string _itemDetails) {
+        itemImg.sprite = img.sprite;
+        itemName.text = _itemName;
+        itemDetails.text = _itemDetails;
     }
 }
