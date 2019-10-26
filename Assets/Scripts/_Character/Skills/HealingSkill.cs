@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class HealingSkill : ActiveSkill
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Healing")]
+	public int healAmount = 1;
+    public bool isPercentageBased = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override void TriggerEffect()
+	{
+        Damageable userDamageable = user.GetComponent<Damageable>();
+        userDamageable.GainHealth(isPercentageBased ? (userDamageable.currentHealth / userDamageable.maxHealth) * (100 + healAmount) : healAmount);
+	}
 }
