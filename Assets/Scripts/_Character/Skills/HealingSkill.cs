@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class HealingSkill : ActiveSkill
 {
-	public int healAmount;
+    [Header("Healing")]
+	public int healAmount = 1;
+    public bool isPercentageBased = false;
+
     public override void TriggerEffect()
 	{
-		user.GetComponent<Damageable>().GainHealth(healAmount);
+        Damageable userDamageable = user.GetComponent<Damageable>();
+        userDamageable.GainHealth(isPercentageBased ? (userDamageable.currentHealth / userDamageable.maxHealth) * (100 + healAmount) : healAmount);
 	}
 }

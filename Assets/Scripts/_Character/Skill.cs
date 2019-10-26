@@ -7,12 +7,13 @@ public class Skill : MonoBehaviour
 	public int level = 1;
 	public int maxLevel = 5;
 	public skillType type;
+    public readonly string tooltip = "";
 	public enum skillType
 	{
 		Active,
 		Passive,
 	}
 
-	public virtual void levelUp()
+	public virtual void LevelUp()
 	{}
 }
