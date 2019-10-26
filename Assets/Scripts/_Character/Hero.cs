@@ -10,25 +10,29 @@ public class Hero : Character
 	{ }
 
 	[System.Serializable]
-	public class XPGainEvent : UnityEvent<Hero>
+	public class XPGainEvent : UnityEvent<Hero, float>
 	{ }
 
-	[Header("Leveling")]
 	[SerializeField] private LevelUpEvent OnLevelUp = null;
 	[SerializeField] private XPGainEvent OnXPGain = null;
+	[SerializeField] private int skillPoints = 0;
+	[SerializeField] private int skillPointsPerLevel = 0;
+
 	public void LevelUp()
 	{
 		OnLevelUp.Invoke(this);
+		skillPoints += skillPointsPerLevel;
 	}
 
 	public void GainXP(int amount)
 	{
 		data.xp += amount;
-		OnXPGain.Invoke(this);
-		if (data.xp >= data.xpToNextLevel)
+		OnXPGain.Invoke(this, amount);
+		while (data.xp >= data.xpToNextLevel)
 		{
 			data.xp -= data.xpToNextLevel;
-			/* temporary */ data.xpToNextLevel *= 2;
+			/* temporary */
+			data.xpToNextLevel *= 2;
 			LevelUp();
 		}
 	}
