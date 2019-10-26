@@ -15,12 +15,24 @@ public class Hero : Character
 
 	[SerializeField] private LevelUpEvent OnLevelUp = null;
 	[SerializeField] private XPGainEvent OnXPGain = null;
+	[SerializeField] private int attributePoints = 0;
+	[SerializeField] private int attributePointsPerLevel = 0;
 	[SerializeField] private int skillPoints = 0;
 	[SerializeField] private int skillPointsPerLevel = 0;
+	public ActiveSkill[] activeSkills;
 
+	private void Start()
+	{
+		/* temporary */
+		foreach (ActiveSkill heroSkill in activeSkills)
+		{
+			heroSkill.user = this.gameObject;
+		}
+	}
 	public void LevelUp()
 	{
 		OnLevelUp.Invoke(this);
+		attributePoints += attributePointsPerLevel;
 		skillPoints += skillPointsPerLevel;
 	}
 

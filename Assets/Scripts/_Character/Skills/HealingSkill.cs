@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class HealingSkill : ActiveSkill
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public int healAmount;
+    public override void TriggerEffect()
+	{
+		user.GetComponent<Damageable>().GainHealth(healAmount);
+	}
 }

@@ -31,6 +31,16 @@ public class UserInput : MonoBehaviour
 						player.moveTo(hit.point);
 				}
 			}
+			if (Input.GetKeyDown(KeyCode.Alpha1))
+				player.TriggerSkill(0);
+			if (Input.GetKeyDown(KeyCode.Alpha2))
+				player.TriggerSkill(1);
+			if (Input.GetKeyDown(KeyCode.Alpha3))
+				player.TriggerSkill(2);
+			if (Input.GetKeyDown(KeyCode.Alpha4))
+				player.TriggerSkill(3);
+			if (Input.GetKeyDown(KeyCode.Alpha5))
+				player.TriggerSkill(4);
 		}
 	}
 }

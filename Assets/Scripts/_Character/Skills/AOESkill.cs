@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class AOESkill : ActiveSkill
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private float AOERadius;
+	public float damage;
+	public override void TriggerEffect()
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
 }
