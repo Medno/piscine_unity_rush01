@@ -45,13 +45,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   maxLevel: 5
+  skillName: Skill
   type: 0
+  tooltip: 
+  isLocked: 1
+  skillButton: {fileID: 0}
+  levelBox: {fileID: 0}
+  levelText: {fileID: 0}
+  nextSkill: {fileID: 0}
+  hero: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectParticle: {fileID: 0}
+  effectPrefab: {fileID: 0}
   activeType: 0
   cooldown: 0
   cost: 0
@@ -59,3 +67,6 @@ MonoBehaviour:
   debug_activateSkill: 0
   user: {fileID: 0}
   target: {fileID: 0}
+  damage: 5
+  damageDelay: 0.5
+  targetOffset_y: 0.25

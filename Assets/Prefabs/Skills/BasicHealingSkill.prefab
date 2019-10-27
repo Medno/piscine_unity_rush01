@@ -45,7 +45,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   maxLevel: 5
+  skillName: Skill
   type: 0
+  tooltip: 
+  isLocked: 1
+  skillButton: {fileID: 0}
+  levelBox: {fileID: 0}
+  levelText: {fileID: 0}
+  nextSkill: {fileID: 0}
+  hero: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
@@ -54,7 +62,7 @@ MonoBehaviour:
   effectPrefab: {fileID: 1710630864473985781, guid: 11a4ca92eb6d04e47b98ef2b67a9cd62,
     type: 3}
   activeType: 0
-  cooldown: 0
+  cooldown: 4
   cost: 0
   nextUseTime: 0
   debug_activateSkill: 0

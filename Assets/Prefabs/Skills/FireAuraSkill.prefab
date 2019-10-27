@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2635735723646900754
+--- !u!1 &4974537795877564636
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2635735723646900781}
-  - component: {fileID: 4307434006079576513}
+  - component: {fileID: 4974537795877564643}
+  - component: {fileID: 692308347500504414}
   m_Layer: 0
-  m_Name: BasicAOESkill
+  m_Name: FireAuraSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2635735723646900781
+--- !u!4 &4974537795877564643
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2635735723646900754}
+  m_GameObject: {fileID: 4974537795877564636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,32 +31,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4307434006079576513
+--- !u!114 &692308347500504414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2635735723646900754}
+  m_GameObject: {fileID: 4974537795877564636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f1911653586fc349be8191369afd3ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 451fcd43b57961c47822c2f1f536a778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   maxLevel: 5
+  skillName: Skill
   type: 0
+  tooltip: 
+  isLocked: 1
+  skillButton: {fileID: 0}
+  levelBox: {fileID: 0}
+  levelText: {fileID: 0}
+  nextSkill: {fileID: 0}
+  hero: {fileID: 0}
+  upgrade: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectParticle: {fileID: 0}
-  activeType: 0
-  cooldown: 0
+  effectPrefab: {fileID: 6610566744478977845, guid: a947d3192f2ff654192c05219a6cb099,
+    type: 3}
+  activeType: 3
+  cooldown: 1
   cost: 0
   nextUseTime: 0
   debug_activateSkill: 0
   user: {fileID: 0}
   target: {fileID: 0}
-  damage: 0
+  dps: 10
+  duration: 5

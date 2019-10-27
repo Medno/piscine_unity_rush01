@@ -17,12 +17,11 @@ public class UserInput : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (canControl)
 		{
-			if (Input.GetMouseButtonDown(0))
+			if (Input.GetMouseButton(0))
 			{
 				RaycastHit hit;
 				if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
@@ -48,5 +47,9 @@ public class UserInput : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.P))
 				player.forceLevelUp();
 		}
+	}
+	public void resetPlayerState()
+	{
+		player.state = PlayerController.PlayerState.idle;
 	}
 }

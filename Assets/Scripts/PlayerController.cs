@@ -9,12 +9,20 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float attackRadius = 5;
 	[SerializeField] private float attackDelay = 3;
 	[SerializeField] private float nextAttackTime = 0;
+	[SerializeField] private float castingDuration = 1f;
 
 	private static PlayerController _instance;
 	private Animator animator;
 	private NavMeshAgent agent;
 	private Hero character;
-
+	public PlayerState state = PlayerState.idle;
+	public enum PlayerState
+	{
+		chase,
+		attacking,
+		idle,
+		casting,
+	}
 	public static PlayerController instance
 	{
 		get
@@ -71,6 +79,8 @@ public class PlayerController : MonoBehaviour
 	}
 	public void moveTo(Vector3 newDestination)
 	{
+		if (state == PlayerState.casting)
+			return;
 		transform.LookAt(newDestination);
 		agent.destination = newDestination;
 		animator.SetBool("run", true);
@@ -97,9 +107,22 @@ public class PlayerController : MonoBehaviour
 	{
 		if (index < character.activeSkills.Length)
 		{
-			character.activeSkills[index].target = target;
-			character.activeSkills[index].Activate();
+			state = PlayerState.casting;
+			agent.isStopped = true;
+			agent.ResetPath();
+			animator.SetBool("run", false);
+			character.activeSkills[index].GetComponent<ActiveSkill>().target = target;
+			character.activeSkills[index].GetComponent<ActiveSkill>().Activate();
+			if (character.activeSkills[index].GetComponent<ActiveSkill>().activeType != ActiveSkill.activeSkillType.AOE)
+			{
+				Invoke("EndCasting", castingDuration);
+			}
 		}
+	}
+
+	public void EndCasting()
+	{
+		state = PlayerState.idle;
 	}
 	public GameObject getTarget()
 	{
@@ -109,8 +132,11 @@ public class PlayerController : MonoBehaviour
 	{
 		target = newTarget;
 		transform.LookAt(newTarget.transform.position);
-		agent.destination = newTarget.transform.position;
-		animator.SetBool("run", true);
+		if (state != PlayerState.casting)
+		{
+			agent.destination = newTarget.transform.position;
+			animator.SetBool("run", true);
+		}
 	}
 	public void resetTarget()
 	{

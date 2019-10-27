@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 6707606426227863259}
   - component: {fileID: 4752518136633259191}
   - component: {fileID: 409928039264815842}
+  - component: {fileID: 8388577417848774062}
   m_Layer: 0
   m_Name: Lambent_Female
   m_TagString: enemy
@@ -1147,7 +1148,7 @@ MonoBehaviour:
   nextAttackTime: 3
   colliders:
   - {fileID: 6023645923226895354}
-  - {fileID: 5397291566865954449}
+  - {fileID: 8388577417848774062}
 --- !u!195 &439581230133301857
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1264,6 +1265,7 @@ MonoBehaviour:
   xpToNextLevel: 100
   credits: 0
   attackSpeed: 1
+  damageBoost: 0
 --- !u!114 &4752518136633259191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,6 +1279,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
+  abilityPointsPerLevel: 3
+  strengthUpgradeChance: 40
+  armorUpgradeChance: 10
+  constitutionUpgradeChance: 40
+  evasionUpgradeChance: 10
+  test:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &409928039264815842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1327,19 @@ MonoBehaviour:
   legendaryChance: 5
   listItem: {fileID: 0}
   player: {fileID: 0}
+--- !u!65 &8388577417848774062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817439483759236213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.4, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1 &8817439483759236215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8817439483759593493}
   - component: {fileID: 8817439483745638545}
-  - component: {fileID: 5397291566865954449}
   m_Layer: 10
   m_Name: Lambent_Female
   m_TagString: Untagged
@@ -1459,20 +1502,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000000005122274, y: 0.0012237513, z: 0.017577955}
     m_Extent: {x: 0.009122584, y: 0.004271804, z: 0.019252507}
   m_DirtyAABB: 0
---- !u!64 &5397291566865954449
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8817439483759236215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: c78068908f8aadb45a12635af21fcb1d, type: 3}
 --- !u!1 &8817439483759236481
 GameObject:
   m_ObjectHideFlags: 0

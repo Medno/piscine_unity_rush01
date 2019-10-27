@@ -11,12 +11,13 @@ public class Skill : MonoBehaviour
 	public string skillName = "Skill";
 	public skillType type;
     [TextArea] public string tooltip = "";
-		public bool isLocked = true;
-		public Button		skillButton;
-		[SerializeField] public GameObject	levelBox;
-		[SerializeField] public TextMeshProUGUI		levelText;
-		[SerializeField] public Skill	nextSkill;
-		[SerializeField] private Hero	hero;
+	public bool isLocked = true;
+	public Button		skillButton;
+	[SerializeField] public GameObject	levelBox;
+	[SerializeField] public TextMeshProUGUI		levelText;
+	[SerializeField] public Skill	nextSkill;
+	[SerializeField] private Hero	hero;
+	public GameObject upgrade;
 
 	public enum skillType
 	{

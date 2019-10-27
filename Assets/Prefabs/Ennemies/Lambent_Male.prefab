@@ -1542,7 +1542,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5726203919460115454}
   - component: {fileID: 5726203919446160250}
-  - component: {fileID: 5726203919459762077}
   m_Layer: 10
   m_Name: Lambent_Male
   m_TagString: Untagged
@@ -1695,20 +1694,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000028871, y: 0.00061297463, z: 0.017470174}
     m_Extent: {x: 0.0100426, y: 0.004598522, z: 0.019664437}
   m_DirtyAABB: 0
---- !u!64 &5726203919459762077
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5726203919459762076}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: edb27a59002a0b743af33db7e327ffe7, type: 3}
 --- !u!1 &5726203919459762078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,6 +1711,7 @@ GameObject:
   - component: {fileID: 4119290038901610907}
   - component: {fileID: 7381770143232676640}
   - component: {fileID: 6710838773678827838}
+  - component: {fileID: 5699547792573536557}
   m_Layer: 0
   m_Name: Lambent_Male
   m_TagString: enemy
@@ -1786,7 +1772,7 @@ MonoBehaviour:
   nextAttackTime: 3
   colliders:
   - {fileID: 6358984273867716261}
-  - {fileID: 5726203919459762077}
+  - {fileID: 5699547792573536557}
 --- !u!195 &791297782305853391
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1902,6 +1888,8 @@ MonoBehaviour:
   xp: 5
   xpToNextLevel: 100
   credits: 0
+  attackSpeed: 1
+  damageBoost: 0
 --- !u!114 &7381770143232676640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1934,6 +1922,19 @@ MonoBehaviour:
   legendaryChance: 5
   listItem: {fileID: 0}
   player: {fileID: 0}
+--- !u!65 &5699547792573536557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726203919459762078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.4, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1 &5726203919459762112
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,6 @@ public class EnemyLoot : MonoBehaviour
         int loot;
         if (Random.Range(0, 101) < chanceOfLooting) {
             loot = Random.Range(0, 101);
-            Debug.Log(loot);
             if (loot < legendaryChance)
                 Spawn(4);
             else if (loot < epicChance + legendaryChance)

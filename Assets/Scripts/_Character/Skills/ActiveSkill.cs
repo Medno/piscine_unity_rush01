@@ -10,34 +10,25 @@ public class ActiveSkill : Skill
 	[SerializeField] protected ActivateEvent OnSkillActivated = null;
 
 	[SerializeField] protected GameObject effectPrefab;
-	[SerializeField] protected activeSkillType activeType;
+	public activeSkillType activeType;
 
 	[SerializeField] protected float cooldown = 0;
 	[SerializeField] protected float cost = 0;
-	[SerializeField] protected float nextUseTime;
+	public float nextUseTime = 0;
 	[SerializeField] protected bool debug_activateSkill = false;
 	public GameObject user;
 	public GameObject target;
-
-	public virtual void Update()
+	public enum activeSkillType
 	{
-		if (debug_activateSkill)
-		{
-			Activate();
-			debug_activateSkill = false;
-		}
-	}
-	public enum activeSkillType {
 		Healing,
 		AOE,
 		Ranged,
 		Aura
 	}
+
 	public virtual void Activate()
 	{
-		if (nextUseTime < Time.time)
-			return;
-		nextUseTime = Time.time + cooldown;
 		OnSkillActivated.Invoke(this);
+		nextUseTime = Time.time + cooldown;
 	}
 }

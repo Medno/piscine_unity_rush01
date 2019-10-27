@@ -50,6 +50,7 @@ public class Damageable : MonoBehaviour
 
 		if (currentHealth <= 0)
 		{
+			currentHealth = 0;
 			OnDie.Invoke(this);
 			if (disableOnDeath)
 				gameObject.SetActive(false);
