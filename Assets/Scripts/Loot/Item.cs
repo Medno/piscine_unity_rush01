@@ -10,6 +10,8 @@ public class Item : Equippable
     public string description;
     public int scarcity;
     private GameObject player;
+    public int damageBuff;
+    public float speedAttack;
     // Start is called before the first frame update
     void Awake()
     {
