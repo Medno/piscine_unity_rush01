@@ -17,12 +17,13 @@ public class TalentManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(1)) {
             if (talentSelected == null)
                 talentSelected = Talents.Find(talent => talent.GetComponent<OverItem>().isInsideBox == true);
             else
                 slotSelected = Slots.Find(slot => slot.GetComponent<OverSlot>().isInsideBox == true);
             if (talentSelected != null && slotSelected != null) {
+                // todo set action
                 talentSelected = null;
                 slotSelected = null;
             }
