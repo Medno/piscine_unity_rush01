@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class DisplayCanvas : MonoBehaviour
 {
-    public GameObject  panel;
     public KeyCode  key;
     private bool    isActive;
     private Popup   popUp;
+    private Canvas canvas;
 
     void Start() {
         isActive = false;
-        panel.SetActive(false);
+        canvas = GetComponent<Canvas>();
+        canvas.enabled = false;
         popUp = GameObject.FindGameObjectWithTag("PopUp").GetComponent<Popup>();
     }
+
     void Update()
     {
         if (!isActive && Input.GetKeyDown(key)) {
-            panel.SetActive(true);
+            canvas.enabled = true;
             isActive = true;
-            Debug.Log("true");
+            // Debug.Log("Display canvas");
         }
         else if (Input.GetKeyDown(key)) {
-            panel.SetActive(false);
+            canvas.enabled = false;
             isActive = false;
-            if (popUp.win && popUp.win.activeSelf)
-                popUp.win.gameObject.SetActive(false);
-            Debug.Log("false");
+            // Debug.Log("Display canvas");
         }
     }
 }
