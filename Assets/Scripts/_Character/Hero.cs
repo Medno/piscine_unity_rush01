@@ -61,17 +61,15 @@ public class Hero : Character
 		data.damageMod += item.damage;
 		data.armor += item.armor;
 		data.agility += item.evasion;
-		if (item.type == Equippable.EquipType.weapon)
-			data.attackSpeedMod += item.attackSpeed;
+		data.attackSpeedMod += item.attackSpeed;
 	}
 
 	public void Unequip(Equippable item)
 	{
-		data.damageBoost -= item.damage;
+		data.damageMod -= item.damage;
 		data.armor -= item.armor;
 		data.agility -= item.evasion;
-		if (item.type == Equippable.EquipType.weapon)
-			data.attackSpeed = 1;
+		data.attackSpeedMod -= item.attackSpeed;
 	}
 	public void SwitchEquips(Equippable oldEquip, Equippable newEquip)
 	{
