@@ -26,8 +26,11 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             if (firstSelected == null) {
                 firstSelected = Inventory.Find(slot => slot.GetComponent<OverItem>().isInsideBox == true && slot.GetComponent<OverItem>().isEmpty == false);
-                if (firstSelected != null)
-                    firstSelected.transform.Find("Mask").Find("Panel").Find("Image").GetComponent<Image>().color = Color.black;
+                if (firstSelected != null) {
+                    Color tmpColor = firstSelected.transform.Find("MaskForImage").GetComponent<Image>().color;
+                    tmpColor.a = 0.5f;
+                    firstSelected.transform.Find("MaskForImage").GetComponent<Image>().color = tmpColor;
+                }
             }
             else {
                 secondSelected = Inventory.Find(slot => slot.GetComponent<OverItem>().isInsideBox == true && slot.GetComponent<OverItem>().isEmpty == false);
@@ -37,7 +40,9 @@ public class InventoryManager : MonoBehaviour
                     Inventary.Equip(firstSelected.GetComponent<ItemInventory>().item.gameObject);
                 } else
                     Inventary.Drop(firstSelected.GetComponent<ItemInventory>().item.gameObject);
-                firstSelected.transform.Find("Mask").Find("Panel").Find("Image").GetComponent<Image>().color = Color.white;
+                // Color tmpColor = firstSelected.transform.Find("MaskForImage").GetComponent<Image>().color;
+                // tmpColor.a = 1f;
+                // firstSelected.transform.Find("MaskForImage").GetComponent<Image>().color = tmpColor;
                 firstSelected = null;
                 secondSelected = null;
             }
