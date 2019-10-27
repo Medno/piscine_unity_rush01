@@ -14,10 +14,10 @@ public class GameStateManager : MonoBehaviour
 	[SerializeField] private float fadeDuration = 1f;
 	[SerializeField] private bool fadeInOnLoad = false;
 	private string currentText;
-	[SerializeField] private Vector3 spawnPoint;
+	[SerializeField] private Transform spawnPoint;
 	public void Start()
 	{
-		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().Respawn(spawnPoint);
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().Respawn(spawnPoint.position);
 		if (fadeInOnLoad)
 		{
 			fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, 1);

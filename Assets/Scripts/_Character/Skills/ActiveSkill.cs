@@ -12,9 +12,7 @@ public class ActiveSkill : Skill
 	[SerializeField] protected GameObject effectPrefab;
 	public activeSkillType activeType;
 
-	[SerializeField] protected float cooldown = 0;
-	[SerializeField] protected float cost = 0;
-	public float nextUseTime = 0;
+	public int cost = 10;
 	[SerializeField] protected bool debug_activateSkill = false;
 	public GameObject user;
 	public GameObject target;
@@ -29,6 +27,5 @@ public class ActiveSkill : Skill
 	public virtual void Activate()
 	{
 		OnSkillActivated.Invoke(this);
-		nextUseTime = Time.time + cooldown;
 	}
 }

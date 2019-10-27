@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 	private static PlayerController _instance;
 	private Animator animator;
 	private NavMeshAgent agent;
+	private ManaPool manaPool;
 	private Hero character;
 	public PlayerState state = PlayerState.idle;
 	public enum PlayerState
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
 		character = GetComponent<Hero>();
 		animator = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
+		manaPool = GetComponent<ManaPool>();
 	}
 
 	private void Update()
@@ -108,14 +110,17 @@ public class PlayerController : MonoBehaviour
 	{
 		if (index < character.activeSkills.Length)
 		{
-			state = PlayerState.casting;
-			agent.isStopped = true;
-			agent.ResetPath();
-			character.activeSkills[index].GetComponent<ActiveSkill>().target = target;
-			character.activeSkills[index].GetComponent<ActiveSkill>().Activate();
-			if (character.activeSkills[index].GetComponent<ActiveSkill>().activeType != ActiveSkill.activeSkillType.AOE)
+			if (manaPool.SpendMana(character.activeSkills[index].GetComponent<ActiveSkill>().cost))
 			{
-				Invoke("EndCasting", castingDuration);
+				state = PlayerState.casting;
+				agent.isStopped = true;
+				agent.ResetPath();
+				character.activeSkills[index].GetComponent<ActiveSkill>().target = target;
+				character.activeSkills[index].GetComponent<ActiveSkill>().Activate();
+				if (character.activeSkills[index].GetComponent<ActiveSkill>().activeType != ActiveSkill.activeSkillType.AOE)
+				{
+					Invoke("EndCasting", castingDuration);
+				}
 			}
 		}
 	}
@@ -158,6 +163,10 @@ public class PlayerController : MonoBehaviour
 	public void makeInvincible()
 	{
 		GetComponent<Damageable>().toggleInvulnerability();
+	}
+	public void makeInfiniteMana()
+	{
+		GetComponent<ManaPool>().toggleInfiniteMana();
 	}
 	public void Respawn(Vector3 respawnLocation)
 	{

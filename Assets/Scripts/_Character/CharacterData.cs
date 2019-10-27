@@ -7,6 +7,7 @@ public class CharacterData : MonoBehaviour
 	public int strength = 10;
 	public int agility = 10;
 	public int constitution = 10;
+	public int intelligence = 10;
 	public int armor = 0;
 	public int level = 1;
 	public int xp = 0;
@@ -18,6 +19,10 @@ public class CharacterData : MonoBehaviour
 	public int maxHP
 	{
 		get { return constitution * 5; }
+	}
+	public int maxMana
+	{
+		get { return intelligence * 5; }
 	}
 	public int minDamage
 	{

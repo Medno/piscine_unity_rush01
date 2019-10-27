@@ -13,7 +13,9 @@ public class Enemy : Character
 	[SerializeField] private int creditMultiplierPerLevel = 130;
 	public void setLevel(int newLevel)
 	{
-		newLevel -= 1;
+		if (newLevel < data.level)
+			return;
+		newLevel -= data.level;
 		data.xp += Mathf.RoundToInt(newLevel * xpMultiplierPerLevel / 100);
 		data.credits += Mathf.RoundToInt(newLevel * creditMultiplierPerLevel / 100);
 		data.strength = Mathf.RoundToInt(newLevel * strengthUpgradeChance / 100);

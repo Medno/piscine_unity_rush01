@@ -35,6 +35,8 @@ public class Item : Equippable
     void OnTriggerEnter(Collider Col) {
         if (isEquiped == false && Col.gameObject.tag == "Player" && hasBeenDrop == false) {
             player.GetComponent<Inventary>().PickUp(gameObject);
+            if (over.popUp.CanvasIsEnabled())
+                over.popUp.DisableCanvas();
         }
     }
     void OnTriggerExit(Collider Col) {

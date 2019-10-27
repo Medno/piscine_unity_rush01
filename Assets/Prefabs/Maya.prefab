@@ -562,7 +562,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7237275700874411082}
   - component: {fileID: 1356889746622922394}
-  - component: {fileID: 1551199368374343636}
   m_Layer: 9
   m_Name: mesh4
   m_TagString: Untagged
@@ -705,20 +704,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0012526568, y: 0.014326967, z: -0.00034644082}
     m_Extent: {x: 0.010986359, y: 0.016302833, z: 0.0040679453}
   m_DirtyAABB: 0
---- !u!64 &1551199368374343636
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551199368374343637}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300008, guid: 6a05499940f38404e9a586d0304429e8, type: 3}
 --- !u!1 &1559490489473253733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +2516,7 @@ GameObject:
   - component: {fileID: 7219731828884883293}
   - component: {fileID: 8469271810313987544}
   - component: {fileID: 3484160867325920988}
+  - component: {fileID: 1766119735}
   m_Layer: 9
   m_Name: Maya
   m_TagString: Player
@@ -2679,7 +2665,7 @@ NavMeshAgent:
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 1080
-  m_StoppingDistance: 0.1
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2702,13 +2688,15 @@ MonoBehaviour:
   strength: 20
   agility: 10
   constitution: 20
+  intelligence: 10
   armor: 20
   level: 1
   xp: 0
   xpToNextLevel: 100
   credits: 0
   attackSpeed: 1
-  damageBoost: 0
+  attackSpeedMod: 0
+  damageMod: 0
 --- !u!114 &7219731828884883293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,8 +2750,8 @@ MonoBehaviour:
   - {fileID: 6381234391606453913, guid: f59978fa3e37de24da5bbd91deefdd92, type: 3}
   - {fileID: 6704670607626106140, guid: dbe636d6108d16a4fbf828a116d48d1c, type: 3}
   - {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772, type: 3}
+  - {fileID: 7927292668677751605, guid: 8221c5f0b23e3334287e73d693cc4f2c, type: 3}
   passiveSkills: []
-  damage: 0
 --- !u!114 &8469271810313987544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,6 +2780,27 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1766119735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219731828884883281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495d17927d322ad4ca2e5886976ecd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMana: 0
+  maxMana: 100
+  data: {fileID: 0}
+  OnManaSet:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ManaPool+ManaEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  infiniteMana: 0
 --- !u!1 &7358398922875927214
 GameObject:
   m_ObjectHideFlags: 0
