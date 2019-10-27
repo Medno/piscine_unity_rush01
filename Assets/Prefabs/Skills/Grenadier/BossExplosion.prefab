@@ -48,18 +48,13 @@ MonoBehaviour:
   skillName: Grenade
   type: 0
   tooltip: 
-  isLocked: 1
-  skillButton: {fileID: 0}
-  levelBox: {fileID: 0}
-  levelText: {fileID: 0}
-  nextSkill: {fileID: 0}
   upgrade: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectPrefab: {fileID: 3282985051088012520, guid: aba36960585a85440bc9769597bf2350,
+  effectPrefab: {fileID: 1534307325406567, guid: 18f11a7aaf3e14d4291c46b7231a6872,
     type: 3}
   activeType: 1
   cost: 0

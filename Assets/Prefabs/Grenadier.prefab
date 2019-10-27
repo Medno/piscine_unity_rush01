@@ -200,6 +200,7 @@ MonoBehaviour:
   - {fileID: 5190406841218877398}
   skills:
   - {fileID: 6704670607626106140, guid: dbe636d6108d16a4fbf828a116d48d1c, type: 3}
+  - {fileID: 2635735723646900754, guid: 8706e0564d8d3f946b6348e4da8cf777, type: 3}
   hitParticles: {fileID: 5390494408250455159}
 --- !u!65 &5190406841218877419
 BoxCollider:
