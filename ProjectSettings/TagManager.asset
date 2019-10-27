@@ -8,6 +8,7 @@ TagManager:
   - rightHand
   - ItemList
   - InputManager
+  - PopUp
   layers:
   - Default
   - TransparentFX

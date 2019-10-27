@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 272696124685069234}
   - component: {fileID: 3320819837968203998}
   - component: {fileID: 8084059329174340828}
+  - component: {fileID: 2138755878897106664}
   m_Layer: 0
   m_Name: weapon_01
   m_TagString: Untagged
@@ -141,8 +142,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cd25261f0844ac59a090b86ea67bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  damage: 10
+  attackSpeed: 1
+  armor: 1
+  evasion: 1
   Skin: {fileID: 21300000, guid: 0fbab684251368a40992116a23aa4894, type: 3}
   isEquiped: 0
   nameItem: Epee Fine
   description: Epee vraiment fine
   scarcity: 0
+--- !u!114 &2138755878897106664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134642895595984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUp: {fileID: 0}

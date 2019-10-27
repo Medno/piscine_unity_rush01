@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7398661865212991418}
   - component: {fileID: 508103640592158100}
   - component: {fileID: 4281450302496137887}
+  - component: {fileID: 192697338099789559}
   m_Layer: 0
   m_Name: weapon_09
   m_TagString: Untagged
@@ -141,8 +142,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cd25261f0844ac59a090b86ea67bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  damage: 10
+  attackSpeed: 1
+  armor: 1
+  evasion: 1
   Skin: {fileID: 21300000, guid: 4000aec99999cc743914b21547c72bf4, type: 3}
   isEquiped: 0
   nameItem: Hache des tenebres
   description: Cette hache a ete forgee en enfer
   scarcity: 4
+--- !u!114 &192697338099789559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001171344669682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

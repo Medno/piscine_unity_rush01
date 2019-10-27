@@ -2529,6 +2529,8 @@ GameObject:
   - component: {fileID: 7219731828884883285}
   - component: {fileID: 7219731828884883283}
   - component: {fileID: 7219731828884883293}
+  - component: {fileID: 8469271810313987544}
+  - component: {fileID: 3484160867325920988}
   m_Layer: 9
   m_Name: Maya
   m_TagString: Player
@@ -2591,6 +2593,7 @@ MonoBehaviour:
   attackRadius: 5
   attackDelay: 3
   nextAttackTime: 0
+  castingDuration: 1
   state: 0
 --- !u!114 &7219731828884883282
 MonoBehaviour:
@@ -2761,6 +2764,34 @@ MonoBehaviour:
   - {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772, type: 3}
   passiveSkills: []
   damage: 0
+--- !u!114 &8469271810313987544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219731828884883281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecb490ab91cc4b6a817c478417be3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedItems: []
+  equipedWeapon: {fileID: 0}
+--- !u!136 &3484160867325920988
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219731828884883281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7358398922875927214
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4382964698336592645}
   - component: {fileID: 2053579587846584449}
   - component: {fileID: 4610793458636776802}
+  - component: {fileID: 2326232672887480903}
   m_Layer: 0
   m_Name: weapon_05
   m_TagString: Untagged
@@ -141,8 +142,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cd25261f0844ac59a090b86ea67bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  damage: 10
+  attackSpeed: 1
+  armor: 1
+  evasion: 1
   Skin: {fileID: 21300000, guid: cd6616973a59c12479bd6bc58815df7d, type: 3}
   isEquiped: 0
   nameItem: Epee du roi Arthur
   description: Cette epee a ete retrouver dans une contre lointaine
   scarcity: 0
+--- !u!114 &2326232672887480903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702945505949426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5932757448114300593}
   - component: {fileID: 6002487714752618413}
   - component: {fileID: 8104724197764717441}
+  - component: {fileID: 9201362667317636805}
   m_Layer: 0
   m_Name: weapon_07
   m_TagString: Untagged
@@ -141,9 +142,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cd25261f0844ac59a090b86ea67bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  damage: 10
+  attackSpeed: 1
+  armor: 1
+  evasion: 1
   Skin: {fileID: 21300000, guid: f1ccb35a69dc84547889148c665ba8c0, type: 3}
   isEquiped: 0
   nameItem: Epee de glace
   description: Cette epee n'a pas reussi a etre datee, sa conservation parfaite viens
     du fait qu'elle a ete conservee dans la glace depuis des millenaires
   scarcity: 3
+--- !u!114 &9201362667317636805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160547565976780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

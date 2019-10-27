@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Popup : MonoBehaviour
 {
     public Image    itemImg;
-    public Text     itemName;
-    public Text     itemDetails;
-    public void SetItemDetails(Image img, string _itemName, string _itemDetails) {
-        itemImg.sprite = img.sprite;
+    public TextMeshProUGUI     itemName;
+    public TextMeshProUGUI     itemDetails;
+    public GameObject       win;
+    public void SetItemDetails(Sprite sprite, string _itemName, string _itemDetails) {
+        itemImg.sprite = sprite;
         itemName.text = _itemName;
         itemDetails.text = _itemDetails;
     }

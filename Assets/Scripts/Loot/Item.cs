@@ -10,18 +10,25 @@ public class Item : Equippable
     public string description;
     public int scarcity;
     private GameObject player;
-    // Start is called before the first frame update
+    private OverItem over;
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        over = GetComponent<OverItem>();
+        SetItem();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
-    
+    void SetItem() {
+        over.SetSprite(Skin);
+        over.SetName(nameItem);
+        // Generate description with damage, dps, description
+        over.SetDetails(description);
+    }
+
     void OnTriggerEnter(Collider Col) {
         if (isEquiped == false && Col.gameObject.tag == "Player") {
             Debug.Log("Coucou");

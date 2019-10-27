@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2873100459885611682}
   - component: {fileID: 3136826621932792942}
   - component: {fileID: 5648007915673576262}
+  - component: {fileID: 7624401080011291867}
   m_Layer: 0
   m_Name: weapon_08
   m_TagString: Untagged
@@ -141,8 +142,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cd25261f0844ac59a090b86ea67bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  damage: 10
+  attackSpeed: 1
+  armor: 1
+  evasion: 1
   Skin: {fileID: 21300000, guid: b4353fdb493c6e746ad34c34bfb1c059, type: 3}
   isEquiped: 0
   nameItem: Epee foudroyante
   description: Zeus a fabrique cette epee
   scarcity: 3
+--- !u!114 &7624401080011291867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918853560935132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

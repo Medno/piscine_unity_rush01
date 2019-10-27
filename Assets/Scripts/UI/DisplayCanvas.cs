@@ -7,10 +7,12 @@ public class DisplayCanvas : MonoBehaviour
     public GameObject  panel;
     public KeyCode  key;
     private bool    isActive;
+    private Popup   popUp;
 
     void Start() {
         isActive = false;
         panel.SetActive(false);
+        popUp = GameObject.FindGameObjectWithTag("PopUp").GetComponent<Popup>();
     }
     void Update()
     {
@@ -22,6 +24,8 @@ public class DisplayCanvas : MonoBehaviour
         else if (Input.GetKeyDown(key)) {
             panel.SetActive(false);
             isActive = false;
+            if (popUp.win && popUp.win.activeSelf)
+                popUp.win.gameObject.SetActive(false);
             Debug.Log("false");
         }
     }
