@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  damage: 10
-  attackSpeed: 1
+  damage: 15
+  attackSpeed: 0.1
   armor: 1
   evasion: 1
   Skin: {fileID: 21300000, guid: 34837dde3f995c04fac31cfa598d242f, type: 3}
@@ -184,6 +184,9 @@ MonoBehaviour:
   nameItem: Epee de feu
   description: Cette epee a ete forgee dans la lave
   scarcity: 3
+  level: 0
+  hasBeenDrop: 0
+  isInside: 0
 --- !u!114 &5834044757991070423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0
 --- !u!1 &1901383999606234
 GameObject:
   m_ObjectHideFlags: 0

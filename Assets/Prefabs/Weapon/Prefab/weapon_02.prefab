@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  damage: 10
-  attackSpeed: 1
+  damage: 8
+  attackSpeed: 0.5
   armor: 1
   evasion: 1
   Skin: {fileID: 21300000, guid: ea807625c9a9cdf43981a72962fd0549, type: 3}
@@ -132,6 +132,9 @@ MonoBehaviour:
   nameItem: Faucille des tenebres
   description: Cette faucille doit venir d'un endroit sombre
   scarcity: 0
+  level: 0
+  hasBeenDrop: 0
+  isInside: 0
 --- !u!114 &4285822730474124138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0
