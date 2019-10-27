@@ -13,17 +13,18 @@ public class CharacterData : MonoBehaviour
 	public int xpToNextLevel = 100;
 	public int credits = 0;
 	public int attackSpeed = 1;
-	public int damageBoost = 0;
+	public int attackSpeedMod = 0;
+	public int damageMod = 0;
 	public int maxHP
 	{
 		get { return constitution * 5; }
 	}
 	public int minDamage
 	{
-		get { return strength / 2 + damageBoost; }
+		get { return strength / 2 + damageMod; }
 	}
 	public int maxDamage
 	{
-		get { return strength / 2 + 4 + damageBoost; }
+		get { return strength / 2 + 4 + damageMod; }
 	}
 }

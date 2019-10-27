@@ -15,6 +15,6 @@ public class AOESkill : ActiveSkill
 		newAOEGenerator.transform.position = target ? target.transform.position : user.transform.position;
 		newAOEGenerator.GetComponent<AOEEffect>().damage = damage;
 		newAOEGenerator.GetComponent<AOEEffect>().radius = AOERadius;
-		newAOEGenerator.GetComponent<AOEEffect>().particleEffect = Instantiate(effectPrefab);
+		newAOEGenerator.GetComponent<AOEEffect>().particleEffect = effectPrefab;
 	}
 }

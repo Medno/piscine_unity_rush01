@@ -12,7 +12,8 @@ public class PassiveBuffSkill : PassiveSkill
     public enum BuffType {
         strength,
         armor,
-        evasion
+        evasion,
+		attackSpeed,
     }
     public override void Activate() {
         switch (buffType) {
@@ -34,6 +35,11 @@ public class PassiveBuffSkill : PassiveSkill
                     user.GetComponent<CharacterData>().agility += buffAmount;
                     break;
                 }
+			case BuffType.attackSpeed:
+				{
+					user.GetComponent<CharacterData>().attackSpeedMod += buffAmount;
+						break;
+				}
         }
     }
 

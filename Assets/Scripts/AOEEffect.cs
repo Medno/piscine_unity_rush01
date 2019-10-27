@@ -34,7 +34,7 @@ public class AOEEffect : MonoBehaviour
 	}
 	private void triggerAOE()
 	{
-		GameObject newEffect = Instantiate(particleEffect, transform);
+		GameObject newEffect = Instantiate(particleEffect, gameObject.transform);
 		newEffect.transform.position = dropPosition;
 		Collider[] colliders = Physics.OverlapSphere(dropPosition, radius);
 		foreach (Collider enemy in colliders)

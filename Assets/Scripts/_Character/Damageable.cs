@@ -36,6 +36,7 @@ public class Damageable : MonoBehaviour
 
 	public void TakeDamage(int damage, int hitChance)
 	{
+		maxHealth = data.maxHP;
 		if (invulnerable || currentHealth <= 0)
 			return;
 
@@ -62,13 +63,12 @@ public class Damageable : MonoBehaviour
 	{
 		currentHealth += amount;
 
-		if (currentHealth > maxHealth)
-			currentHealth = maxHealth;
+		if (currentHealth > data.maxHP)
+			currentHealth = data.maxHP;
 
 		OnHealthSet.Invoke(this);
 		OnGainHealth.Invoke(amount, this);
 	}
-
 	public void SetHealth(int amount)
 	{
 		currentHealth = amount;

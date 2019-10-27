@@ -4730,6 +4730,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maya
       objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1296787554}
+    - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 239401823}
     - target: {fileID: 6186382978539314145, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4785,16 +4795,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1296787554}
-    - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 239401823}
     - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: activeSkills.Array.size
@@ -4816,7 +4816,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7927292668677751605, guid: 8221c5f0b23e3334287e73d693cc4f2c,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 7219731828884883285, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1551199368374343636, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
 --- !u!1001 &7733573185452663980
 PrefabInstance:

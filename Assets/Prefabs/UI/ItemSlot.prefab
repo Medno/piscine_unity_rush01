@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEmpty: 0
+  isInsideBox: 0
 --- !u!114 &5931247190579229907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +283,7 @@ MonoBehaviour:
   index: 0
   item: {fileID: 0}
   buttonItem: {fileID: 7884652324782147333}
+  ColorItem: {fileID: 6332905914078542798}
 --- !u!61 &4914305709812015571
 BoxCollider2D:
   m_ObjectHideFlags: 0

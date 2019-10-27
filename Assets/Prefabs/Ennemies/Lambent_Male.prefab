@@ -1903,6 +1903,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
+  abilityPointsPerLevel: 3
+  strengthUpgradeChance: 150
+  armorUpgradeChance: 10
+  constitutionUpgradeChance: 150
+  evasionUpgradeChance: 10
+  xpMultiplierPerLevel: 130
+  creditMultiplierPerLevel: 130
 --- !u!114 &6710838773678827838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,6 +1929,8 @@ MonoBehaviour:
   legendaryChance: 5
   listItem: {fileID: 0}
   player: {fileID: 0}
+  PotionPrefab: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
+    type: 3}
 --- !u!65 &5699547792573536557
 BoxCollider:
   m_ObjectHideFlags: 0

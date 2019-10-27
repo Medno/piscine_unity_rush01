@@ -51,10 +51,10 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
-		if (agent.remainingDistance < agent.stoppingDistance && animator.GetBool("run") == true)
-		{
+		if (agent.velocity.magnitude < 0.15)
 			animator.SetBool("run", false);
-		}
+		else
+			animator.SetBool("run", true);
 		if (target)
 		{
 			transform.LookAt(target.transform.position);
@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
 				if (Time.time > nextAttackTime)
 				{
 					animator.SetBool("attack", true);
-					animator.SetBool("run", false);
 					agent.isStopped = true;
 					agent.ResetPath();
 					nextAttackTime = Time.time + attackDelay;
@@ -73,9 +72,12 @@ public class PlayerController : MonoBehaviour
 			}
 			else
 			{
+				animator.SetBool("attack", false);
 				animator.speed = 1;
 			}
 		}
+		else
+			animator.SetBool("attack", false);
 	}
 	public void moveTo(Vector3 newDestination)
 	{
@@ -83,7 +85,6 @@ public class PlayerController : MonoBehaviour
 			return;
 		transform.LookAt(newDestination);
 		agent.destination = newDestination;
-		animator.SetBool("run", true);
 	}
 	public void DealDamage()
 	{
@@ -110,7 +111,6 @@ public class PlayerController : MonoBehaviour
 			state = PlayerState.casting;
 			agent.isStopped = true;
 			agent.ResetPath();
-			animator.SetBool("run", false);
 			character.activeSkills[index].GetComponent<ActiveSkill>().target = target;
 			character.activeSkills[index].GetComponent<ActiveSkill>().Activate();
 			if (character.activeSkills[index].GetComponent<ActiveSkill>().activeType != ActiveSkill.activeSkillType.AOE)
@@ -135,13 +135,10 @@ public class PlayerController : MonoBehaviour
 		if (state != PlayerState.casting)
 		{
 			agent.destination = newTarget.transform.position;
-			animator.SetBool("run", true);
 		}
 	}
 	public void resetTarget()
 	{
-		animator.SetBool("attack", false);
-		animator.SetBool("run", false);
 		agent.isStopped = true;
 		agent.ResetPath();
 		target = null;
@@ -161,5 +158,16 @@ public class PlayerController : MonoBehaviour
 	public void makeInvincible()
 	{
 		GetComponent<Damageable>().toggleInvulnerability();
+	}
+	public void Respawn(Vector3 respawnLocation)
+	{
+		agent.isStopped = true;
+		agent.ResetPath();
+		target = null;
+		transform.position = respawnLocation;
+		GetComponent<Damageable>().SetHealth(character.data.maxHP);
+		character.data.xp = 0;
+		character.data.credits = 0;
+		// animator.settrigger("respawn");
 	}
 }
