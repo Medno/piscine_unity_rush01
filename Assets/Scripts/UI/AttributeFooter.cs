@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SkillsFooter : MonoBehaviour
+public class AttributeFooter : MonoBehaviour
 {
     private Hero   hero;
     private TextMeshProUGUI text;
@@ -13,7 +13,7 @@ public class SkillsFooter : MonoBehaviour
     }
     void Update()
     {
-        if (hero.GetSkillsPoints().ToString() != text.text)
-            text.text = hero.GetSkillsPoints().ToString();
+        if (hero.GetAttributePoints().ToString() != text.text)
+            text.text = hero.GetAttributePoints().ToString();
     }
 }

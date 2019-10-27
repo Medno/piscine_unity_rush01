@@ -81,5 +81,9 @@ public class Hero : Character
 	public void UseTalentPoint() {
 		skillPoints--;
 	}
+	public void UseAttributePoint() {
+		attributePoints--;
+	}
 	public int GetSkillsPoints() { return skillPoints; }
+	public int GetAttributePoints() {return attributePoints;}
 }
