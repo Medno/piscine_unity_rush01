@@ -23,7 +23,6 @@ public class Damageable : MonoBehaviour
 	[SerializeField] private bool destroyOnDeath = false;
 	[SerializeField] private bool invulnerable = false;
 	[HideInInspector] public int currentHealth = 100;
-	[HideInInspector] public int maxHealth = 100;
 
 	private CharacterData data;
 
@@ -31,7 +30,6 @@ public class Damageable : MonoBehaviour
 	{
 		data = GetComponent<CharacterData>();
 		currentHealth = data.maxHP;
-		maxHealth = data.maxHP;
 	}
 
 	public void TakeDamage(int damage, int hitChance)
@@ -62,13 +60,12 @@ public class Damageable : MonoBehaviour
 	{
 		currentHealth += amount;
 
-		if (currentHealth > maxHealth)
-			currentHealth = maxHealth;
+		if (currentHealth > data.maxHP)
+			currentHealth = data.maxHP;
 
 		OnHealthSet.Invoke(this);
 		OnGainHealth.Invoke(amount, this);
 	}
-
 	public void SetHealth(int amount)
 	{
 		currentHealth = amount;

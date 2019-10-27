@@ -159,4 +159,15 @@ public class PlayerController : MonoBehaviour
 	{
 		GetComponent<Damageable>().toggleInvulnerability();
 	}
+	public void Respawn(Vector3 respawnLocation)
+	{
+		agent.isStopped = true;
+		agent.ResetPath();
+		target = null;
+		transform.position = respawnLocation;
+		GetComponent<Damageable>().SetHealth(character.data.maxHP);
+		character.data.xp = 0;
+		character.data.credits = 0;
+		// animator.settrigger("respawn");
+	}
 }
