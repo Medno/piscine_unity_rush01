@@ -12027,6 +12027,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1024943404}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1031658764 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413185905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495d17927d322ad4ca2e5886976ecd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1031658768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7219731828884883283, guid: 3b44f5081d7354596a88a672f6507e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413185905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dd56d9412228542b74bc2678b412e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1031658770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413185905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944add8aa458a084b824fdbf083b2e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1045259889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15851,6 +15887,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedDamageable
+      value: 
+      objectReference: {fileID: 1031658770}
+    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedData
+      value: 
+      objectReference: {fileID: 1031658768}
+    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedManaPool
+      value: 
+      objectReference: {fileID: 1031658764}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d901bf849e67cc645b6b8222845bdcc0, type: 3}
 --- !u!4 &1371552905 stripped
