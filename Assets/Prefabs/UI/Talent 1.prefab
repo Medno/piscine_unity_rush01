@@ -146,7 +146,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -171,7 +171,8 @@ GameObject:
   - component: {fileID: 848327019296766140}
   - component: {fileID: 7575573932079950133}
   - component: {fileID: 203272790010247736}
-  - component: {fileID: 1342629456582805239}
+  - component: {fileID: 6332167318456015591}
+  - component: {fileID: 1431203012348384045}
   m_Layer: 0
   m_Name: Talent 1
   m_TagString: Untagged
@@ -186,7 +187,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977658667095469709}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -228,7 +229,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300034, guid: b4208f086767246a5b198d39670c54ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1342629456582805239
+--- !u!114 &6332167318456015591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,18 +247,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 977658667095469709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2efe0a4dbcf835f48b7d258a345781b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cec8d3a8ed743319f465dee9f8a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  maxLevel: 5
-  type: 0
   isLocked: 1
-  skillButton: {fileID: 4564766574294575571}
+  skillButton: {fileID: 7432637054376621102}
   levelBox: {fileID: 1937554120622588796}
   levelText: {fileID: 7640130547318999066}
   nextSkill: {fileID: 0}
-  hero: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+  skillGO: {fileID: 0}
+--- !u!114 &1431203012348384045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977658667095469709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0
 --- !u!1 &1937554120622588796
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +412,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c2673da5b3721406bac18c29966c5517, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

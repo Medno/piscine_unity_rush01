@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private Popup   popUp;
+    [HideInInspector]public Popup   popUp;
     private ItemInventory   itemInventory;
     private Sprite  sprite;
     private string  itemName;
