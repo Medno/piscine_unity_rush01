@@ -5046,6 +5046,26 @@ PrefabInstance:
       propertyPath: m_Text
       value: Skills
       objectReference: {fileID: 0}
+    - target: {fileID: 2663846215945391391, guid: f8eb50cabca87432786c32f2309b38f6,
+        type: 3}
+      propertyPath: m_text
+      value: Skills
+      objectReference: {fileID: 0}
+    - target: {fileID: 2663846215945391391, guid: f8eb50cabca87432786c32f2309b38f6,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2663846215945391391, guid: f8eb50cabca87432786c32f2309b38f6,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2663846215945391391, guid: f8eb50cabca87432786c32f2309b38f6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8eb50cabca87432786c32f2309b38f6, type: 3}
 --- !u!224 &4868246169941211648 stripped
