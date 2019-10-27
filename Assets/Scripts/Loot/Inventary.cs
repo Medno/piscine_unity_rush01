@@ -18,11 +18,11 @@ public class Inventary : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y) == true)
+        if (Input.GetKeyDown(KeyCode.Y) == true && ownedItems[0] != null)
             Equip(ownedItems[0]);
-        if (Input.GetKeyDown(KeyCode.U) == true)
+        if (Input.GetKeyDown(KeyCode.U) == true && equipedWeapon != null)
             Unequip();
-        if (Input.GetKeyDown(KeyCode.Q) == true)
+        if (Input.GetKeyDown(KeyCode.Q) == true && ownedItems[0] != null)
             Drop(ownedItems[0]);
     }
     public void PickUp(GameObject obj) {
@@ -65,5 +65,9 @@ public class Inventary : MonoBehaviour
         obj.transform.position = player.transform.position;
         GeometryExtensions.SetPositionY(obj.transform, obj.transform.position.y + 0.3f);
         ownedItems.Remove(obj);   
+    }
+    public void putInIndex(GameObject current, int index) {
+        ownedItems.Remove(current);
+        ownedItems.Insert(index, current);
     }
 }

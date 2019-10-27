@@ -10,6 +10,8 @@ public class Item : Equippable
     public string description;
     public int scarcity;
     private GameObject player;
+    public int damageBuff;
+    public float speedAttack;
     private OverItem over;
     void Awake()
     {
