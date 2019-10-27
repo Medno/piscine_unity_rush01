@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
   isEmpty: 0
   isInsideBox: 0
 --- !u!114 &5931247190579229907
