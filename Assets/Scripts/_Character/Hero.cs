@@ -21,7 +21,6 @@ public class Hero : Character
 	[SerializeField] private int skillPointsPerLevel = 0;
 	public GameObject[] activeSkills;
 	public GameObject[] passiveSkills;
-	public int damage = 0;
 	private void Start()
 	{
 		/* temporary */
