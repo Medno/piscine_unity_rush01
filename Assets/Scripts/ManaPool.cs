@@ -7,14 +7,11 @@ public class ManaPool : MonoBehaviour
 	[System.Serializable]
 	public class ManaEvent : UnityEvent<ManaPool>
 	{ }
-	public class ManaGainEvent : UnityEvent<ManaPool, float>
-	{ }
 	[HideInInspector] public int currentMana = 100;
 	[HideInInspector] public int maxMana = 100;
 	[SerializeField]
 	private CharacterData data;
 	[SerializeField] private ManaEvent OnManaSet;
-	[SerializeField] private ManaGainEvent OnManaGain;
 	[SerializeField] private bool infiniteMana = false;
 	private void OnEnable()
 	{
@@ -41,7 +38,6 @@ public class ManaPool : MonoBehaviour
 		currentMana += amount;
 		if (currentMana > maxMana)
 			currentMana = maxMana;
-		OnManaGain.Invoke(this, amount);
 		OnManaSet.Invoke(this);
 	}
 
