@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   damage: 10
-  attackSpeed: 1
+  attackSpeed: 0.1
   armor: 1
   evasion: 1
   Skin: {fileID: 21300000, guid: 0fbab684251368a40992116a23aa4894, type: 3}
@@ -152,6 +152,9 @@ MonoBehaviour:
   nameItem: Epee Fine
   description: Epee vraiment fine
   scarcity: 0
+  level: 0
+  hasBeenDrop: 0
+  isInside: 0
 --- !u!114 &2138755878897106664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +168,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0

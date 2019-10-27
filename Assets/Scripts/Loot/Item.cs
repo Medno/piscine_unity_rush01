@@ -12,6 +12,7 @@ public class Item : Equippable
     private GameObject player;
     public int level;
     public bool hasBeenDrop = false;
+    public bool isInside = false;
     private OverItem over;
     void Awake()
     {
@@ -19,11 +20,7 @@ public class Item : Equippable
         over = GetComponent<OverItem>();
         SetItem();
     }
-
-    void Update()
-    {
-
-    }
+    
     void SetItem() {
         over.SetSprite(Skin);
         over.SetName(nameItem);
@@ -34,14 +31,21 @@ public class Item : Equippable
 
     void OnTriggerEnter(Collider Col) {
         if (isEquiped == false && Col.gameObject.tag == "Player" && hasBeenDrop == false) {
-            player.GetComponent<Inventary>().PickUp(gameObject);
-            if (over.popUp.CanvasIsEnabled())
-                over.popUp.DisableCanvas();
+            isInside = true;
         }
     }
     void OnTriggerExit(Collider Col) {
         if (isEquiped == false && Col.gameObject.tag == "Player" && hasBeenDrop == true) {
+            isInside = false;
             hasBeenDrop = false;
+        }
+    }
+    void OnMouseOver() {
+        if (isInside && Input.GetMouseButtonDown(0)) {
+            player.GetComponent<Inventary>().PickUp(gameObject);
+            if (over.popUp.CanvasIsEnabled())
+                over.popUp.DisableCanvas();
+            isInside = false;
         }
     }
     Color GetItemColor() {

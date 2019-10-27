@@ -1259,13 +1259,15 @@ MonoBehaviour:
   strength: 10
   agility: 5
   constitution: 7
+  intelligence: 10
   armor: 20
   level: 1
   xp: 5
   xpToNextLevel: 100
   credits: 0
   attackSpeed: 1
-  damageBoost: 0
+  attackSpeedMod: 0
+  damageMod: 0
 --- !u!114 &4752518136633259191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,6 +1309,7 @@ MonoBehaviour:
   player: {fileID: 0}
   PotionPrefab: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
     type: 3}
+  PotionMana: {fileID: 1000013317980782, guid: 2cf6690298568294cb6b655c0a3aeb87, type: 3}
 --- !u!65 &8388577417848774062
 BoxCollider:
   m_ObjectHideFlags: 0
