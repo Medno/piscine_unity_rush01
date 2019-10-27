@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95922933397882013}
   m_LocalRotation: {x: -0.01678797, y: -0.010234822, z: 0.002366704, w: 0.99980396}
-  m_LocalPosition: {x: 0.00007683039, y: -0.00009499304, z: 0.00093591213}
+  m_LocalPosition: {x: 0.000076293945, y: -0.00009499304, z: 0.00093603134}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children:
   - {fileID: 8815804532616878715}
@@ -2797,7 +2797,18 @@ MonoBehaviour:
   data: {fileID: 0}
   OnManaSet:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: RefreshValues
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: ManaPool+ManaEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   infiniteMana: 0

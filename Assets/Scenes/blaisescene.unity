@@ -1651,29 +1651,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 239401823}
     - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
       propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1296787557}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6186382978539314145, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1739,16 +1719,6 @@ PrefabInstance:
       propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1296787555}
-    - target: {fileID: 3283538008997894152, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.000076293945
-      objectReference: {fileID: 0}
-    - target: {fileID: 3283538008997894152, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.00093603134
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
 --- !u!1001 &7733573185452663980
