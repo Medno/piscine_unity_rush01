@@ -16,7 +16,7 @@ public class Skill : MonoBehaviour
 	[SerializeField] public GameObject	levelBox;
 	[SerializeField] public TextMeshProUGUI		levelText;
 	[SerializeField] public Skill	nextSkill;
-	[SerializeField] private Hero	hero;
+	private Hero	hero;
 	public GameObject upgrade;
 
 	public enum skillType
@@ -25,10 +25,9 @@ public class Skill : MonoBehaviour
 		Passive,
 	}
 	void Start() {
+		hero = GameObject.FindGameObjectWithTag("Player").GetComponent<Hero>();
 		skillButton.onClick.AddListener(LevelUp);
 		Debug.Log(hero.GetSkillsPoints());
-
-		Debug.Log("Add Listener");
 	}
 	public void LevelUp()
 	{

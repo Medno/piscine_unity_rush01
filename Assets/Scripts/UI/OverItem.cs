@@ -39,7 +39,7 @@ public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         isInsideBox = true;
         if(!isEmpty) {
             print("OnMouseEnter");
-            popUp.win.gameObject.SetActive(true);
+            popUp.EnableCanvas();
             popUp.SetItemDetails(sprite, itemName, itemDetails, itemScarcityColor);
         }
       }
@@ -49,24 +49,24 @@ public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         isInsideBox = false;
         print("OnMouseExit");
         if(!isEmpty) {
-            popUp.win.gameObject.SetActive(false);
+            popUp.DisableCanvas();
         }
     }
 
     void OnMouseEnter() {
         isEmpty = false;
         Debug.Log("Selecting item");
-        popUp.win.gameObject.SetActive(true);
+        popUp.EnableCanvas();
         popUp.SetItemDetails(sprite, itemName, itemDetails, itemScarcityColor);
     }
     void OnMouseExit() {
         isEmpty = true;
         Debug.Log("Quitting selection item");
-        popUp.win.gameObject.SetActive(false);
+        popUp.DisableCanvas();
     }
     void Update()
     {
-        if (!isEmpty && popUp.win && popUp.win.gameObject.activeSelf) {
+        if (!isEmpty && popUp.CanvasIsEnabled()) {
             popUp.win.gameObject.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition + (Vector3.up * 5f);
         }
     }
