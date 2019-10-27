@@ -37,7 +37,7 @@ public class PassiveBuffSkill : PassiveSkill
                 }
 			case BuffType.attackSpeed:
 				{
-					user.GetComponent<CharacterData>().attackSpeedMod += buffAmount;
+					user.GetComponent<CharacterData>().attackSpeedMod += (float)buffAmount / 100f;
 						break;
 				}
         }

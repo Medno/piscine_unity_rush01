@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4974537795877564636
+--- !u!1 &6100292493342370356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4974537795877564643}
-  - component: {fileID: 692308347500504414}
+  - component: {fileID: 6100292493342370315}
+  - component: {fileID: 8467312585570507062}
   m_Layer: 0
-  m_Name: FireAuraSkill
+  m_Name: AttackSpeedBuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4974537795877564643
+--- !u!4 &6100292493342370315
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4974537795877564636}
+  m_GameObject: {fileID: 6100292493342370356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,35 +31,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &692308347500504414
+--- !u!114 &8467312585570507062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4974537795877564636}
+  m_GameObject: {fileID: 6100292493342370356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451fcd43b57961c47822c2f1f536a778, type: 3}
+  m_Script: {fileID: 11500000, guid: 89bc0b29ff8b84d14b5bdc7560615734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  maxLevel: 1
-  skillName: Fire Aura
-  type: 0
-  tooltip: A cloath of fire that burns ennemies in the area with 15 damage per second.
+  maxLevel: 5
+  skillName: Skill
+  type: 1
+  tooltip: Increases your attack speed by 20%
   upgrade: {fileID: 0}
-  OnSkillActivated:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  effectPrefab: {fileID: 6610566744478977845, guid: a947d3192f2ff654192c05219a6cb099,
-    type: 3}
-  activeType: 3
-  cost: 45
-  debug_activateSkill: 0
   user: {fileID: 0}
-  target: {fileID: 0}
-  dps: 15
-  duration: 5
+  buffType: 3
+  buffAmount: 20
+  isPercentageBased: 0

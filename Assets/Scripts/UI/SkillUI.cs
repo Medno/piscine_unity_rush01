@@ -19,7 +19,8 @@ public class SkillUI : MonoBehaviour
 		Debug.Log("Clicking...");
 		Debug.Log(hero.GetSkillsPoints());
 		if (!isLocked && skill.level < skill.maxLevel && hero.GetSkillsPoints() > 0) {
-			skill.level += 1;
+			if (skill.upgrade)
+				skill = skill.upgrade.GetComponent<Skill>();
 			hero.UseTalentPoint();
 			levelText.text = skill.level.ToString() + " / " + skill.maxLevel.ToString();
 			if (skill.level >= skill.maxLevel && nextSkill != null)

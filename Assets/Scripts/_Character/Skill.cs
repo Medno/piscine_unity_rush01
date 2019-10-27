@@ -18,6 +18,4 @@ public class Skill : MonoBehaviour
 	}
 	void Start() {
 	}
-	void Update() {
-	}
 }

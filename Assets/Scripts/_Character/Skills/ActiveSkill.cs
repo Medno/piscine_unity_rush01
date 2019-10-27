@@ -23,7 +23,10 @@ public class ActiveSkill : Skill
 		Ranged,
 		Aura
 	}
-
+	public void Start()
+	{
+		tooltip += "/nCost: " + cost;
+	}
 	public virtual void Activate()
 	{
 		OnSkillActivated.Invoke(this);

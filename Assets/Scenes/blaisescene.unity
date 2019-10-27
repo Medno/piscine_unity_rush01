@@ -1457,6 +1457,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorePackage
       objectReference: {fileID: 0}
+    - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedDamageable
+      value: 
+      objectReference: {fileID: 604084871}
+    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedData
+      value: 
+      objectReference: {fileID: 604084870}
+    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedManaPool
+      value: 
+      objectReference: {fileID: 1766119735}
     - target: {fileID: 4198257394735160271, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1542,21 +1557,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
+    - target: {fileID: 4198257393035995188, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
-      propertyPath: representedDamageable
-      value: 
-      objectReference: {fileID: 604084871}
-    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198257394596168481, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
-      propertyPath: representedData
-      value: 
-      objectReference: {fileID: 604084870}
-    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedManaPool
-      value: 
-      objectReference: {fileID: 1766119735}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d901bf849e67cc645b6b8222845bdcc0, type: 3}
 --- !u!1001 &6094133875859585653
@@ -1719,6 +1729,12 @@ PrefabInstance:
       propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1296787555}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[3]
+      value: 
+      objectReference: {fileID: 7314213685301790699, guid: b66c7f0636ae508489d9735731d8522f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
 --- !u!1001 &7733573185452663980

@@ -47,21 +47,22 @@ MonoBehaviour:
   maxLevel: 5
   skillName: GigaBoom I
   type: 0
-  tooltip: A powerful explosion that deals 100 damage to any enemy in it's radius.
-  upgrade: {fileID: 149497113420906013, guid: c54a2c66db7fb9149859d0fe3a200560, type: 3}
+  tooltip: The summum of explosive Art. A world shattering explosion that deals 300
+    damage to any enemy in it's radius.
+  upgrade: {fileID: 7603913156591643414, guid: adf49ea12b99d3c4a83a8c88c632a266, type: 3}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectPrefab: {fileID: 3282985051088012520, guid: aba36960585a85440bc9769597bf2350,
+  effectPrefab: {fileID: 8731959362665462991, guid: 856719e45c4d8c14b934fc9ada567718,
     type: 3}
   activeType: 1
-  cost: 40
+  cost: 100
   debug_activateSkill: 0
   user: {fileID: 0}
   target: {fileID: 0}
-  AOERadius: 6
-  damage: 100
+  AOERadius: 8
+  damage: 300
   AOEGenerator: {fileID: 186037166354747984, guid: 1868459b388e9ec4a8ae64717945c67b,
     type: 3}

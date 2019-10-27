@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6704670607626106147}
   - component: {fileID: 450481268103333590}
   m_Layer: 0
-  m_Name: IceLanceSkill
+  m_Name: TwinIceLance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,32 +43,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2ceddb681313e4f9f4e29f93bfda7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  maxLevel: 5
-  skillName: Ice Spear
+  level: 1
+  maxLevel: 1
+  skillName: Twin Ice Lance
   type: 0
-  tooltip: 
-  isLocked: 1
-  skillButton: {fileID: 0}
-  levelBox: {fileID: 0}
-  levelText: {fileID: 0}
-  nextSkill: {fileID: 0}
-  hero: {fileID: 0}
+  tooltip: A pair of Spears that pierces trough the enemy dealing 60 damage per hit.
   upgrade: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ActiveSkill+ActivateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  effectPrefab: {fileID: 3244463897971509565, guid: a51415c13076d3447aaf25aadbafab99,
+  effectPrefab: {fileID: 3244463897971509565, guid: 9ce686a44324fd843afcd51f7fd300e7,
     type: 3}
   activeType: 2
-  cooldown: 0.1
-  cost: 0
-  nextUseTime: 0
+  cost: 30
   debug_activateSkill: 0
   user: {fileID: 0}
   target: {fileID: 0}
-  damage: 5
+  damage: 60
   damageDelay: 0.5
   targetOffset_y: 0.35
