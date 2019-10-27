@@ -47,9 +47,7 @@ MonoBehaviour:
   maxLevel: 5
   skillName: Skill
   type: 0
-  tooltip: 'Basic heal
-
-    Cost'
+  tooltip: 
   upgrade: {fileID: 0}
   OnSkillActivated:
     m_PersistentCalls:
@@ -59,9 +57,9 @@ MonoBehaviour:
   effectPrefab: {fileID: 1710630864473985781, guid: 11a4ca92eb6d04e47b98ef2b67a9cd62,
     type: 3}
   activeType: 0
-  cost: 5
+  cost: 50
   debug_activateSkill: 0
   user: {fileID: 0}
   target: {fileID: 0}
-  healAmount: 10
+  healAmount: 220
   isPercentageBased: 0
