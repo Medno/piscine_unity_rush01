@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 338809052}
   m_Layer: 0
   m_Name: Input Manager
-  m_TagString: Untagged
+  m_TagString: InputManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4814,7 +4814,7 @@ PrefabInstance:
         type: 3}
       propertyPath: activeSkills.Array.data[3]
       value: 
-      objectReference: {fileID: 2635735723646900754, guid: e384c3ae4ed26a444b27095966af6260,
+      objectReference: {fileID: 7927292668677751605, guid: 8221c5f0b23e3334287e73d693cc4f2c,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
