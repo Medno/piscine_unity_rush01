@@ -1259,13 +1259,15 @@ MonoBehaviour:
   strength: 10
   agility: 5
   constitution: 7
+  intelligence: 10
   armor: 20
   level: 1
   xp: 5
   xpToNextLevel: 100
   credits: 0
   attackSpeed: 1
-  damageBoost: 0
+  attackSpeedMod: 0
+  damageMod: 0
 --- !u!114 &4752518136633259191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de66bb79b1f05340848c63384f97c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 6707606426227863259}
   abilityPointsPerLevel: 3
   strengthUpgradeChance: 40
   armorUpgradeChance: 10

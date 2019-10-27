@@ -163,10 +163,7 @@ public class PlayerController : MonoBehaviour
 	public void makeInvincible()
 	{
 		GetComponent<Damageable>().toggleInvulnerability();
-	}
-	public void makeInfiniteMana()
-	{
-		GetComponent<ManaPool>().toggleInfiniteMana();
+		manaPool.toggleInfiniteMana();
 	}
 	public void Respawn(Vector3 respawnLocation)
 	{
