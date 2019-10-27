@@ -21,10 +21,10 @@ public class CharacterData : MonoBehaviour
 	}
 	public int minDamage
 	{
-		get { return strength / 2 + damageBoost; }
+		get { return strength / 2 + damageMod; }
 	}
 	public int maxDamage
 	{
-		get { return strength / 2 + 4 + damageBoost; }
+		get { return strength / 2 + 4 + damageMod; }
 	}
 }
