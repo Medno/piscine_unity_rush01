@@ -1284,30 +1284,8 @@ MonoBehaviour:
   armorUpgradeChance: 10
   constitutionUpgradeChance: 40
   evasionUpgradeChance: 10
-  test:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  xpMultiplierPerLevel: 130
+  creditMultiplierPerLevel: 130
 --- !u!114 &409928039264815842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,6 +1305,8 @@ MonoBehaviour:
   legendaryChance: 5
   listItem: {fileID: 0}
   player: {fileID: 0}
+  PotionPrefab: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
+    type: 3}
 --- !u!65 &8388577417848774062
 BoxCollider:
   m_ObjectHideFlags: 0

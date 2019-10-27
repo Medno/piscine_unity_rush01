@@ -12,6 +12,7 @@ public class Item : Equippable
     private GameObject player;
     public int damageBuff;
     public float speedAttack;
+    public bool hasBeenDrop = false;
     private OverItem over;
     void Awake()
     {
@@ -29,12 +30,31 @@ public class Item : Equippable
         over.SetName(nameItem);
         // Generate description with damage, dps, description
         over.SetDetails(description);
+        over.SetScarcityColor(GetItemColor());
     }
 
     void OnTriggerEnter(Collider Col) {
-        if (isEquiped == false && Col.gameObject.tag == "Player") {
-            Debug.Log("Coucou");
+        if (isEquiped == false && Col.gameObject.tag == "Player" && hasBeenDrop == false) {
             player.GetComponent<Inventary>().PickUp(gameObject);
         }
+    }
+    void OnTriggerExit(Collider Col) {
+        if (isEquiped == false && Col.gameObject.tag == "Player" && hasBeenDrop == true) {
+            hasBeenDrop = false;
+        }
+    }
+    Color GetItemColor() {
+        Color color;
+        if (scarcity == 0)
+            ColorUtility.TryParseHtmlString("#95a5a6ff", out color);
+        else if (scarcity == 1)
+            ColorUtility.TryParseHtmlString("#27ae60ff", out color);
+        else if (scarcity == 2)
+            ColorUtility.TryParseHtmlString("#2980b9ff", out color);
+        else if (scarcity == 3)
+            ColorUtility.TryParseHtmlString("#8E44ADFF", out color);
+        else
+            ColorUtility.TryParseHtmlString("#f1c40fff", out color);
+        return color;
     }
 }

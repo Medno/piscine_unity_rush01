@@ -12,7 +12,7 @@ public class EnemyLoot : MonoBehaviour
     public int legendaryChance = 5;
     public ItemList listItem;
     public GameObject player;
-
+    public GameObject PotionPrefab;
     void Awake()
     {
     }
@@ -25,22 +25,30 @@ public class EnemyLoot : MonoBehaviour
     public void Loot() {
         listItem = GameObject.FindGameObjectWithTag("ItemList").GetComponent<ItemList>();
         player = GameObject.FindGameObjectWithTag("Player");
-        int loot;
         if (Random.Range(0, 101) < chanceOfLooting) {
-            loot = Random.Range(0, 101);
-            if (loot < legendaryChance)
-                Spawn(4);
-            else if (loot < epicChance + legendaryChance)
-                Spawn(3);
-            else if (loot < veryRareChance + epicChance + legendaryChance)
-                Spawn(2);
-            else if (loot < rareChance + veryRareChance + epicChance + legendaryChance)
-                Spawn(1);
-            else
-                Spawn(0);
+            LootWeapon();
+        }
+        else {
+            LootPotion();
         }
     }
-    public void Spawn(int scarcity) {
+    void LootWeapon() {
+        int loot = Random.Range(0, 101);
+        if (loot < legendaryChance)
+            Spawn(4);
+        else if (loot < epicChance + legendaryChance)
+            Spawn(3);
+        else if (loot < veryRareChance + epicChance + legendaryChance)
+            Spawn(2);
+        else if (loot < rareChance + veryRareChance + epicChance + legendaryChance)
+            Spawn(1);
+        else
+            Spawn(0);
+    }
+    void LootPotion() {
+        Instantiate(PotionPrefab, transform.position, new Quaternion(0,0,0,0));
+    }
+    void Spawn(int scarcity) {
         Debug.Log(scarcity);
         List<GameObject> selectedItems;
         GameObject selectedItem;

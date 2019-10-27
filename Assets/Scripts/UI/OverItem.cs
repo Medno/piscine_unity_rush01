@@ -11,11 +11,14 @@ public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Sprite  sprite;
     private string  itemName;
     private string  itemDetails;
-    private bool  isEmpty;
+    private Color  itemScarcityColor;
+    public bool  isEmpty;
+    public bool  isInsideBox;
     void Start()
     {
         popUp = GameObject.FindGameObjectWithTag("PopUp").GetComponent<Popup>();
         isEmpty = true;
+        isInsideBox = false;
         itemInventory = GetComponent<ItemInventory>();
     }
     public void SetSprite(Sprite _sprite) {
@@ -28,27 +31,33 @@ public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void SetDetails(string _details) {
         itemDetails = _details;
     }
+    public void SetScarcityColor(Color color) {
+        itemScarcityColor = color;
+    }
     public void OnPointerEnter(PointerEventData eventData)
       {
+        isInsideBox = true;
         if(!isEmpty) {
             print("OnMouseEnter");
             popUp.win.gameObject.SetActive(true);
-            popUp.SetItemDetails(sprite, itemName, itemDetails);
+            popUp.SetItemDetails(sprite, itemName, itemDetails, itemScarcityColor);
         }
       }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        isInsideBox = false;
         print("OnMouseExit");
         if(!isEmpty) {
             popUp.win.gameObject.SetActive(false);
         }
     }
+
     void OnMouseEnter() {
         isEmpty = false;
         Debug.Log("Selecting item");
         popUp.win.gameObject.SetActive(true);
-        popUp.SetItemDetails(sprite, itemName, itemDetails);
+        popUp.SetItemDetails(sprite, itemName, itemDetails, itemScarcityColor);
     }
     void OnMouseExit() {
         isEmpty = true;
@@ -57,7 +66,8 @@ public class OverItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     void Update()
     {
-        if (!isEmpty && popUp.win && popUp.win.gameObject.activeSelf)
+        if (!isEmpty && popUp.win && popUp.win.gameObject.activeSelf) {
             popUp.win.gameObject.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition + (Vector3.up * 5f);
+        }
     }
 }

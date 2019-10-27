@@ -34,6 +34,8 @@ public class Inventary : MonoBehaviour
         }
     }
     public void Equip(GameObject obj) {
+        if (equipedWeapon != null)
+            Unequip();
         Item item = obj.GetComponent<Item>();
         if (item.isEquiped == false && equipedWeapon == null) {
             obj.SetActive(true);
@@ -63,6 +65,7 @@ public class Inventary : MonoBehaviour
         // obj.hideFlags = HideFlags.None;
         obj.SetActive(true);
         obj.transform.position = player.transform.position;
+        obj.GetComponent<Item>().hasBeenDrop = true;
         GeometryExtensions.SetPositionY(obj.transform, obj.transform.position.y + 0.3f);
         ownedItems.Remove(obj);   
     }
