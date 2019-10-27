@@ -6438,7 +6438,7 @@ GameObject:
   - component: {fileID: 2057089717748181334}
   - component: {fileID: 2187661168169671384}
   - component: {fileID: 2187094460585360008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SmallExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6456,7 +6456,7 @@ GameObject:
   - component: {fileID: 2057330831747018934}
   - component: {fileID: 2187868751743854082}
   - component: {fileID: 2188632489085459610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6472,7 +6472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057166068764699258}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightHandEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6488,7 +6488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059110672020267320}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6504,7 +6504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058954142817028576}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_HelmetArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6522,7 +6522,7 @@ GameObject:
   - component: {fileID: 2059197550048232308}
   - component: {fileID: 2188265676507670292}
   - component: {fileID: 2186761699286821006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6540,7 +6540,7 @@ GameObject:
   - component: {fileID: 2057351465698293650}
   - component: {fileID: 2188344717163043676}
   - component: {fileID: 2188541309148724376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6558,7 +6558,7 @@ GameObject:
   - component: {fileID: 2057413538181795670}
   - component: {fileID: 2187815427446046556}
   - component: {fileID: 2188657403516406320}
-  m_Layer: 28
+  m_Layer: 10
   m_Name: Pop2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6575,7 +6575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057226646368282272}
   - component: {fileID: 2141490953595984080}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: DestroyPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6591,7 +6591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057368355217216072}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftChestArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6607,7 +6607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057129873370976452}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftUpperLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6623,7 +6623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057460401304281854}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightChestArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6639,7 +6639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057256733366695624}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6655,7 +6655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057049337585631928}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6673,7 +6673,7 @@ GameObject:
   - component: {fileID: 2057486489230236450}
   - component: {fileID: 2187931313128915928}
   - component: {fileID: 2186553354700983418}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6689,7 +6689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059261396096670554}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6705,7 +6705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057476265257007584}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightUpperLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6721,7 +6721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058743459427687262}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6738,7 +6738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2058819630050134178}
   - component: {fileID: 2143708167734870262}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: DeathPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6756,7 +6756,7 @@ GameObject:
   - component: {fileID: 2057059715909142990}
   - component: {fileID: 2187716300945985026}
   - component: {fileID: 2188730650472404292}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6772,7 +6772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057117651338327292}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftUpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6788,7 +6788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058847068484403374}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6805,7 +6805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057226523963992734}
   - component: {fileID: 2141928095185283302}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: FootstepPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6821,7 +6821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058840344083573596}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightThumbEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6837,7 +6837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059021803130187282}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6853,7 +6853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057488856847875396}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftChestArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6869,7 +6869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058826191023606260}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftThumbEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6886,7 +6886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057495039931768678}
   - component: {fileID: 2141612109380572220}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: ThrowPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6902,7 +6902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058923904014455318}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftLowerLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6918,7 +6918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057066999799405676}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftHandEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6934,7 +6934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059021718076959850}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: GrenadierSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6951,7 +6951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059190326622288382}
   - component: {fileID: 2141710458828664854}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: DamagePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6967,7 +6967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057080512441910038}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6983,7 +6983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059256922523341226}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7001,7 +7001,7 @@ GameObject:
   - component: {fileID: 2057353445330723272}
   - component: {fileID: 2187815007372977438}
   - component: {fileID: 2188678385486444928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7017,7 +7017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059255645699874994}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: SoundPlayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7035,7 +7035,7 @@ GameObject:
   - component: {fileID: 2058944383622118800}
   - component: {fileID: 2188043199857362386}
   - component: {fileID: 2186519705869794448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TakeDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7051,7 +7051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057456053230686708}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_EyeArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7067,7 +7067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057414510575804204}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftFootEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7083,7 +7083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058993796146431590}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightUpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7100,7 +7100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059252874224370958}
   - component: {fileID: 2141890297773087222}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: ShieldUpPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7116,7 +7116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057125217193053540}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7132,7 +7132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057276091009492814}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7150,7 +7150,7 @@ GameObject:
   - component: {fileID: 2057483068450080254}
   - component: {fileID: 2188344866636701504}
   - component: {fileID: 2186831855466220478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Distortion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7168,7 +7168,7 @@ GameObject:
   - component: {fileID: 2057236783315633314}
   - component: {fileID: 2187804293021282160}
   - component: {fileID: 2188541591358284250}
-  m_Layer: 28
+  m_Layer: 10
   m_Name: GrenadeForm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7184,7 +7184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057345615786013344}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightChestArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7200,7 +7200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059204704629395548}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_HelmetArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7216,7 +7216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057184218766404014}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightHornArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7233,7 +7233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057304202251789444}
   - component: {fileID: 2122735825750633630}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,7 +7251,7 @@ GameObject:
   - component: {fileID: 2059149323540919510}
   - component: {fileID: 2188016247964810072}
   - component: {fileID: 2186905193698317632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7268,7 +7268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059015933451490236}
   - component: {fileID: 2141941099430874728}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: PunchPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7286,7 +7286,7 @@ GameObject:
   - component: {fileID: 2059105152964817670}
   - component: {fileID: 2187825252804170728}
   - component: {fileID: 2186875212017991242}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7302,7 +7302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059160003026901704}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightHornArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7318,7 +7318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059043819080646850}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7343,9 +7343,9 @@ GameObject:
   - component: {fileID: 2061155481788038562}
   - component: {fileID: 2061155481788038561}
   - component: {fileID: 2061155481788038560}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7550,7 +7550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057319781494313622}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7566,7 +7566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057469405689981458}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftHornArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7582,7 +7582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057050385740010192}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7598,7 +7598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059209428600828816}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_EyeArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7616,7 +7616,7 @@ GameObject:
   - component: {fileID: 2057299592662805958}
   - component: {fileID: 2187906380325407932}
   - component: {fileID: 2186522289486359276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7632,7 +7632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2057494934467408338}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_LeftHornArmorEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7648,7 +7648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058799312924688910}
-  m_Layer: 23
+  m_Layer: 10
   m_Name: Grenadier_RightLowerLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7666,7 +7666,7 @@ GameObject:
   - component: {fileID: 2057466916944413614}
   - component: {fileID: 2187768609214929584}
   - component: {fileID: 2186625731946355706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
