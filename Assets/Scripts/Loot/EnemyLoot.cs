@@ -49,13 +49,14 @@ public class EnemyLoot : MonoBehaviour
         Instantiate(PotionPrefab, transform.position, new Quaternion(0,0,0,0));
     }
     void Spawn(int scarcity) {
-        Debug.Log(scarcity);
         List<GameObject> selectedItems;
         GameObject selectedItem;
         selectedItems = listItem.prefabs.FindAll(prefab => prefab.GetComponent<Item>().scarcity == scarcity);
         selectedItem = Instantiate(selectedItems[Random.Range(0, selectedItems.Count)], transform.position, new Quaternion(0, 0, 0, 0));
         Item item = selectedItem.GetComponent<Item>();
-        // item.speedAttack = speedAttack * playerLEVEL
+        item.level = player.GetComponent<Hero>().data.level;
+        item.attackSpeed = item.attackSpeed + (float)item.level / 100f;
+        item.damage = item.damage + item.level;
         listItem.spawnedItems.Add(selectedItem);
 
     }

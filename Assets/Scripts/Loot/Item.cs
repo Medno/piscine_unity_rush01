@@ -10,8 +10,7 @@ public class Item : Equippable
     public string description;
     public int scarcity;
     private GameObject player;
-    public int damageBuff;
-    public float speedAttack;
+    public int level;
     public bool hasBeenDrop = false;
     private OverItem over;
     void Awake()
@@ -29,7 +28,7 @@ public class Item : Equippable
         over.SetSprite(Skin);
         over.SetName(nameItem);
         // Generate description with damage, dps, description
-        over.SetDetails(description);
+        over.SetDetails("Level: " + level + "\n+" + damage + " Damage\n+" + attackSpeed + " Speed Attack\n" + description);
         over.SetScarcityColor(GetItemColor());
     }
 

@@ -14,14 +14,7 @@ public class ItemInventory : MonoBehaviour
     private OverItem over;
     void Start()
     {
-        Color color;
-        ColorUtility.TryParseHtmlString("#FFFFFF00", out color);
-        ColorItem.color = color;
-        buttonItem.gameObject.SetActive(false);
-        buttonItem.GetComponent<Image>().sprite = null;
-        item = null;
-        over = GetComponent<OverItem>();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventary>();
+        baseSlot();
     }
 
     void SetItem() {
@@ -29,7 +22,7 @@ public class ItemInventory : MonoBehaviour
         over.SetName(item.nameItem);
         // Generate description with damage, dps, description
         ColorItem.color = GetItemColor();
-        over.SetDetails(item.description);
+        over.SetDetails("Level: " + item.level + "\n+" + item.damage + " Damage\n+" + item.attackSpeed + " Speed Attack\n" + item.description);
         over.SetScarcityColor(GetItemColor());
         buttonItem.GetComponent<Image>().sprite = item.Skin;
         buttonItem.gameObject.SetActive(true);
@@ -45,6 +38,8 @@ public class ItemInventory : MonoBehaviour
         else if (inventory.ownedItems.Count > index) {
             item = inventory.ownedItems[index].GetComponent<Item>();
             SetItem();
+        } else {
+            baseSlot();
         }
     }
     Color GetItemColor() {
@@ -61,5 +56,16 @@ public class ItemInventory : MonoBehaviour
             ColorUtility.TryParseHtmlString("#f1c40fff", out color);
         return color;
 
+    }
+    void baseSlot() {
+        Color color;
+        ColorUtility.TryParseHtmlString("#FFFFFF00", out color);
+        ColorItem.color = color;
+        buttonItem.gameObject.SetActive(false);
+        buttonItem.GetComponent<Image>().sprite = null;
+        item = null;
+        over = GetComponent<OverItem>();
+        over.isEmpty = true;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventary>();
     }
 }

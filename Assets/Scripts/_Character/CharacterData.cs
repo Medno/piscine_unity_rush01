@@ -12,8 +12,8 @@ public class CharacterData : MonoBehaviour
 	public int xp = 0;
 	public int xpToNextLevel = 100;
 	public int credits = 0;
-	public int attackSpeed = 1;
-	public int attackSpeedMod = 0;
+	public float attackSpeed = 1;
+	public float attackSpeedMod = 0;
 	public int damageMod = 0;
 	public int maxHP
 	{
