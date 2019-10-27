@@ -23,6 +23,13 @@ public class SkillUI : MonoBehaviour
 				skill = skill.upgrade.GetComponent<Skill>();
 			hero.UseTalentPoint();
 			levelText.text = skill.level.ToString() + " / " + skill.maxLevel.ToString();
+			if (skill.type == Skill.skillType.Passive)
+			{
+				if (skill.GetComponent<PassiveSkill>().isEnabled == false)
+				{
+					skill.GetComponent<PassiveSkill>().Activate();
+				}
+			}
 			if (skill.level >= skill.maxLevel && nextSkill != null)
 				nextSkill.isLocked = false;
 		}

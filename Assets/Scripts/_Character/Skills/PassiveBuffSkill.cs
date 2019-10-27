@@ -16,6 +16,7 @@ public class PassiveBuffSkill : PassiveSkill
 		attackSpeed,
     }
     public override void Activate() {
+		isEnabled = true;
         switch (buffType) {
             case BuffType.strength:
                 {
