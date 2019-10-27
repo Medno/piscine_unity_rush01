@@ -13,6 +13,7 @@ public class EnemyLoot : MonoBehaviour
     public ItemList listItem;
     public GameObject player;
     public GameObject PotionPrefab;
+    public GameObject PotionMana;
     void Awake()
     {
     }
@@ -46,7 +47,10 @@ public class EnemyLoot : MonoBehaviour
             Spawn(0);
     }
     void LootPotion() {
-        Instantiate(PotionPrefab, transform.position, new Quaternion(0,0,0,0));
+        if (Random.Range(0, 2) == 0)
+            Instantiate(PotionPrefab, transform.position, new Quaternion(0,0,0,0));
+        else
+            Instantiate(PotionMana, transform.position, new Quaternion(0,0,0,0));
     }
     void Spawn(int scarcity) {
         List<GameObject> selectedItems;

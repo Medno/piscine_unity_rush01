@@ -1309,6 +1309,7 @@ MonoBehaviour:
   player: {fileID: 0}
   PotionPrefab: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
     type: 3}
+  PotionMana: {fileID: 1000013317980782, guid: 2cf6690298568294cb6b655c0a3aeb87, type: 3}
 --- !u!65 &8388577417848774062
 BoxCollider:
   m_ObjectHideFlags: 0

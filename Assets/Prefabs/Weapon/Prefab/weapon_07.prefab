@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  damage: 10
-  attackSpeed: 1
+  damage: 20
+  attackSpeed: -0.1
   armor: 1
   evasion: 1
   Skin: {fileID: 21300000, guid: f1ccb35a69dc84547889148c665ba8c0, type: 3}
@@ -153,6 +153,9 @@ MonoBehaviour:
   description: Cette epee n'a pas reussi a etre datee, sa conservation parfaite viens
     du fait qu'elle a ete conservee dans la glace depuis des millenaires
   scarcity: 3
+  level: 0
+  hasBeenDrop: 0
+  isInside: 0
 --- !u!114 &9201362667317636805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0

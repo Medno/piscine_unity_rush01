@@ -114,17 +114,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  damage: 10
-  attackSpeed: 1
+  damage: 15
+  attackSpeed: -0.6
   armor: 1
   evasion: 1
   Skin: {fileID: 21300000, guid: b7067370eb4f9b24b9bfdacb17a7adf6, type: 3}
   isEquiped: 0
   nameItem: Marteau Trop Lourd
   description: Ce marteau est vraiment tres lourd !
-  damage: 0
-  speedAttack: 0
   scarcity: 1
+  level: 0
+  hasBeenDrop: 0
+  isInside: 0
 --- !u!65 &2925879358739577213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -166,3 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
+  isEmpty: 0
+  isInsideBox: 0
