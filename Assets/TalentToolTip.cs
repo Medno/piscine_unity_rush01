@@ -15,8 +15,8 @@ public class TalentToolTip : MonoBehaviour, IPointerEnterHandler
         SkillGo = gameObject.GetComponent<SkillUI>().skillGO;
         over = gameObject.GetComponent<OverItem>();
         img = gameObject.GetComponent<Image>();
-        over.SetName(SkillGo.GetComponent<AOESkill>().skillName);
-        over.SetDetails(SkillGo.GetComponent<AOESkill>().tooltip);
+        over.SetName(SkillGo.GetComponent<Skill>().skillName);
+        over.SetDetails(SkillGo.GetComponent<Skill>().tooltip);
         over.SetScarcityColor(Color.white);
         over.SetSprite(img.sprite);
     }
