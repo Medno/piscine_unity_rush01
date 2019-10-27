@@ -4,10 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: DoorHuge01_Mat
-  m_Shader: {fileID: 4800000, guid: e95b884462a6a7a4eb11404c32625407, type: 3}
+  m_Shader: {fileID: 4800000, guid: e350e9c0ef142a146a96fe1065e44d2c, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _USE_MASK_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -56,6 +57,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MetallicRough:
         m_Texture: {fileID: 2800000, guid: db4e0e43c854bfb4281e36313a2b1548, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
