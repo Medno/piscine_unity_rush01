@@ -16,9 +16,9 @@ public class Hero : Character
 	[SerializeField] private LevelUpEvent OnLevelUp = null;
 	[SerializeField] private XPGainEvent OnXPGain = null;
 	[SerializeField] private int attributePoints = 0;
-	[SerializeField] private int attributePointsPerLevel = 0;
+	[SerializeField] private int attributePointsPerLevel = 1;
 	[SerializeField] private int skillPoints = 0;
-	[SerializeField] private int skillPointsPerLevel = 0;
+	[SerializeField] private int skillPointsPerLevel = 1;
 	public GameObject[] activeSkills;
 	public GameObject[] passiveSkills;
 	private void Start()

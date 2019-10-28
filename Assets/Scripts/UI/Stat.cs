@@ -27,8 +27,8 @@ public class Stat : MonoBehaviour
             textValue.text = hero.data.xpToNextLevel.ToString();
         else if (text.text == "Credits")
             textValue.text = hero.data.credits.ToString();
-        // else if (text.text == "Intelligence")
-        //     textValue.text = hero.data.intelligence.ToString();
+        else if (text.text == "Intelligence")
+            textValue.text = hero.data.intelligence.ToString();
         else if (text.text == "Maximum HP")
             textValue.text = hero.data.maxHP.ToString();
         else if (text.text == "Minimum damage")
@@ -59,8 +59,8 @@ public class Stat : MonoBehaviour
             //     hero.data.xpToNextLevel += 1;
             else if (text.text == "Credits")
                 hero.data.credits += 1;
-            // else if (text.text == "Intelligence")
-            //     hero.data.intelligence += 1;
+            else if (text.text == "Intelligence")
+                hero.data.intelligence += 1;
             SetValue();
         }
     }
