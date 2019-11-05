@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Teleport : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Teleport : MonoBehaviour
     }
     void OnTriggerEnter(Collider Col) {
         if (Col.gameObject.tag == "Player") {
-            Col.gameObject.transform.position = spawnPoint.transform.position;
+            Col.gameObject.GetComponent<NavMeshAgent>().Warp(spawnPoint.transform.position);
         }
     }
 }
