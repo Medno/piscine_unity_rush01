@@ -10,6 +10,7 @@ public class HealingSkill : ActiveSkill
 
     public override void Activate()
 	{
+		Debug.Log("HealActivated");
 		base.Activate();
         Damageable userDamageable = user.GetComponent<Damageable>();
         userDamageable.GainHealth(isPercentageBased ? (userDamageable.currentHealth / userDamageable.maxHealth) * (100 + healAmount) : healAmount);

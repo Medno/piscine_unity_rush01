@@ -66,7 +66,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5190406841218877417}
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -241,15 +241,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60dd56d9412228542b74bc2678b412e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
-  agility: 10
-  constitution: 10
-  intelligence: 10
-  armor: 0
-  level: 1
-  xp: 0
-  xpToNextLevel: 100
-  credits: 0
+  strength: 100
+  agility: 20
+  constitution: 300
+  intelligence: 999
+  armor: 40
+  level: 30
+  xp: 10000
+  xpToNextLevel: 99999
+  credits: 5000
   attackSpeed: 1
   attackSpeedMod: 0
   damageMod: 0

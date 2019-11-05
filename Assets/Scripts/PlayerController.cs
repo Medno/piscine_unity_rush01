@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
 	public void TriggerSkill(int index)
 	{
-		if (index > 0 && index < character.activeSkills.Length)
+		if (index >= 0 && index < character.activeSkills.Length)
 		{
 			if (manaPool.SpendMana(character.activeSkills[index].GetComponent<ActiveSkill>().cost))
 			{

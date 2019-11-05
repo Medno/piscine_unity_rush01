@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3446,7 +3446,6 @@ GameObject:
   m_Component:
   - component: {fileID: 286961233}
   - component: {fileID: 286961232}
-  - component: {fileID: 286961231}
   - component: {fileID: 286961230}
   m_Layer: 0
   m_Name: Main Camera
@@ -3468,14 +3467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 10
---- !u!81 &286961231
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286961229}
-  m_Enabled: 1
 --- !u!20 &286961232
 Camera:
   m_ObjectHideFlags: 0
@@ -4962,7 +4953,6 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 0
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
@@ -13616,7 +13606,6 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 0
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
@@ -14540,7 +14529,6 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 0
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
@@ -15437,7 +15425,6 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 0
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
@@ -15870,21 +15857,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorePackage
       objectReference: {fileID: 0}
-    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedManaPool
-      value: 
-      objectReference: {fileID: 1031658764}
-    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedData
-      value: 
-      objectReference: {fileID: 1031658768}
     - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: representedDamageable
       value: 
       objectReference: {fileID: 1031658770}
+    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedData
+      value: 
+      objectReference: {fileID: 1031658768}
+    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedManaPool
+      value: 
+      objectReference: {fileID: 1031658764}
     - target: {fileID: 4198257394735160271, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16285,14 +16272,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 783120312}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
-      objectReference: {fileID: 0}
     - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16313,47 +16292,14 @@ PrefabInstance:
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GameOver
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: activeSkills.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783120314}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: skillPoints
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: activeSkills.Array.data[3]
-      value: 
-      objectReference: {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772,
-        type: 3}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 783120314}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      objectReference: {fileID: 783120312}
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RefreshValues
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 1031658768}
     - target: {fileID: 6186382978539314145, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16409,6 +16355,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 783120314}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: skillPoints
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[3]
+      value: 
+      objectReference: {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772,
+        type: 3}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 783120314}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefreshValues
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefreshValues
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 1031658768}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[0]
+      value: 
+      objectReference: {fileID: 6381234391606453913, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[1]
+      value: 
+      objectReference: {fileID: 6704670607626106140, guid: dbe636d6108d16a4fbf828a116d48d1c,
+        type: 3}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[2]
+      value: 
+      objectReference: {fileID: 2635735723646900754, guid: e384c3ae4ed26a444b27095966af6260,
+        type: 3}
     - target: {fileID: 2371580839079989603, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_TagString
@@ -22800,8 +22805,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040865526}
-  m_LocalRotation: {x: 0.06584478, y: 0.93266433, z: 0.27660292, w: -0.22201936}
-  m_LocalPosition: {x: 504.0074, y: -323.84354, z: 668.0208}
+  m_LocalRotation: {x: -0.10977263, y: 0.71860915, z: 0.11656593, w: 0.6767299}
+  m_LocalPosition: {x: 101.156334, y: -65.58035, z: 154.69998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24217,6 +24222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114086271284514318, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114086271284514318, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 574479671, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26, type: 3}
