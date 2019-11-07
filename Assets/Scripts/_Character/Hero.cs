@@ -24,6 +24,8 @@ public class Hero : Character
 	private void Start()
 	{
 		/* temporary */
+		attributePointsPerLevel = 1;
+		skillPointsPerLevel = 1;
 		foreach (GameObject heroSkill in activeSkills)
 		{
 			heroSkill.GetComponent<ActiveSkill>().user = this.gameObject;

@@ -13,13 +13,15 @@ public class SkillUI : MonoBehaviour
 	private Hero	hero;
 	[SerializeField] public SkillUI	nextSkill;
     public GameObject   skillGO;
-    private Skill   skill;
+    [HideInInspector]public Skill   skill;
     public void LevelUp()
 	{
 		Debug.Log("Clicking...");
 		Debug.Log(hero.GetSkillsPoints());
 		if (!isLocked && skill.level < skill.maxLevel && hero.GetSkillsPoints() > 0) {
-			if (skill.upgrade)
+			if (skill.level == 0)
+				skill.level = 1;
+			else if (skill.upgrade)
 				skill = skill.upgrade.GetComponent<Skill>();
 			hero.UseTalentPoint();
 			levelText.text = skill.level.ToString() + " / " + skill.maxLevel.ToString();
@@ -40,6 +42,7 @@ public class SkillUI : MonoBehaviour
 		hero = GameObject.FindGameObjectWithTag("Player").GetComponent<Hero>();
         if (skillGO != null) {
             skill = skillGO.GetComponent<Skill>();
+			skill.level = 0;
             skillButton.GetComponent<Button>().onClick.AddListener(LevelUp);
         }
 		Debug.Log(hero.GetSkillsPoints());
@@ -52,8 +55,7 @@ public class SkillUI : MonoBehaviour
 			Color32 eraseBackground = new Color32(255, 255, 255, 255);
 			skillButton.GetComponent<Image>().color = eraseBackground;
 			levelBox.SetActive(true);
-			levelText.text = skill.level.ToString() + " / " + skill.maxLevel.ToString();
+			levelText.text =  skill.level + " / " + skill.maxLevel.ToString();
 		}
-
     }
 }

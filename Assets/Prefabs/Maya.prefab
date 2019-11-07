@@ -2747,10 +2747,10 @@ MonoBehaviour:
   skillPoints: 0
   skillPointsPerLevel: 0
   activeSkills:
-  - {fileID: 6381234391606453913, guid: f59978fa3e37de24da5bbd91deefdd92, type: 3}
-  - {fileID: 6704670607626106140, guid: dbe636d6108d16a4fbf828a116d48d1c, type: 3}
-  - {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772, type: 3}
-  - {fileID: 7314213685301790699, guid: b66c7f0636ae508489d9735731d8522f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   passiveSkills: []
 --- !u!114 &8469271810313987544
 MonoBehaviour:

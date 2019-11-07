@@ -24,7 +24,7 @@ public class TalentManager : MonoBehaviour
                 talentSelected = Talents.Find(talent => talent.GetComponent<OverItem>().isInsideBox == true);
             else
                 slotSelected = Slots.Find(slot => slot.GetComponent<OverSlot>().isInsideBox == true);
-            if (talentSelected != null && slotSelected != null) {
+            if (talentSelected != null && slotSelected != null && talentSelected.GetComponent<SkillUI>().skill.level > 0) {
                 Debug.Log(slotSelected.GetComponent<OverSlot>().index);
                 Debug.Log(talentSelected.GetComponent<SkillUI>());
                 Debug.Log(talentSelected.GetComponent<SkillUI>().skillGO);

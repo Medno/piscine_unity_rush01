@@ -11224,21 +11224,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorePackage
       objectReference: {fileID: 0}
-    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedManaPool
-      value: 
-      objectReference: {fileID: 1031658764}
-    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedData
-      value: 
-      objectReference: {fileID: 1031658768}
     - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: representedDamageable
       value: 
       objectReference: {fileID: 1031658770}
+    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedData
+      value: 
+      objectReference: {fileID: 1031658768}
+    - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedManaPool
+      value: 
+      objectReference: {fileID: 1031658764}
     - target: {fileID: 4198257394735160271, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11645,14 +11645,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 783120312}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
-      objectReference: {fileID: 0}
     - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11673,47 +11665,14 @@ PrefabInstance:
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GameOver
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: activeSkills.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783120314}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: skillPoints
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: activeSkills.Array.data[3]
-      value: 
-      objectReference: {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772,
-        type: 3}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 783120314}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      objectReference: {fileID: 783120312}
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RefreshValues
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 1031658768}
     - target: {fileID: 6186382978539314145, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11769,6 +11728,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 783120314}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: skillPoints
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: activeSkills.Array.data[3]
+      value: 
+      objectReference: {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772,
+        type: 3}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 783120314}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefreshValues
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: OnXPGain.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefreshValues
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
+        type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 1031658768}
     - target: {fileID: 2371580839079989603, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: m_TagString
@@ -16207,8 +16207,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040865526}
-  m_LocalRotation: {x: 0.1844809, y: 0.8039782, z: 0.31675497, w: -0.46824366}
-  m_LocalPosition: {x: 1201.7169, y: -915.8466, z: 799.7881}
+  m_LocalRotation: {x: 0.20596693, y: 0.55991274, z: 0.14614077, w: -0.789125}
+  m_LocalPosition: {x: 488.09106, y: -119.95041, z: 260.57126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17319,27 +17319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cec8d3a8ed743319f465dee9f8a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2139099868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 51507204323569566, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
-    type: 3}
-  m_PrefabInstance: {fileID: 2139099865}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2139099869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139099868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4681f2b2cabc5434ea2bcc6e7788d2c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUp: {fileID: 0}
-  isEmpty: 0
-  isInsideBox: 0
 --- !u!1001 &2141491681
 PrefabInstance:
   m_ObjectHideFlags: 0

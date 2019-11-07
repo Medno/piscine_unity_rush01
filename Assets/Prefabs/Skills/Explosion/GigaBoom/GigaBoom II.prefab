@@ -89,5 +89,10 @@ PrefabInstance:
       value: The summum of explosive Art. A world shattering explosion that deals
         350 damage to any enemy in it's radius.
       objectReference: {fileID: 0}
+    - target: {fileID: 4307434006079576513, guid: fdb5a6f6c181f0747a8dae7cc2ecb0dd,
+        type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb5a6f6c181f0747a8dae7cc2ecb0dd, type: 3}

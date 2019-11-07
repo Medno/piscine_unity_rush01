@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2ceddb681313e4f9f4e29f93bfda7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   maxLevel: 1
   skillName: IceLance - Rain
   type: 0

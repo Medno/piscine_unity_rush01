@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451fcd43b57961c47822c2f1f536a778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   maxLevel: 1
   skillName: Fire Aura
   type: 0

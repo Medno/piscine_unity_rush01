@@ -43,13 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89bc0b29ff8b84d14b5bdc7560615734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   maxLevel: 5
   skillName: Skill
   type: 1
   tooltip: Increases your attack speed by 20%
   upgrade: {fileID: 0}
   user: {fileID: 0}
+  isEnabled: 0
   buffType: 3
   buffAmount: 20
   isPercentageBased: 0

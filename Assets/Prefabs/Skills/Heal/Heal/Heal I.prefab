@@ -43,14 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb631812d3c411142aa3428aa690a793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   maxLevel: 5
   skillName: Skill
   type: 0
   tooltip: 'Basic heal
 
     Cost'
-  upgrade: {fileID: 0}
+  upgrade: {fileID: 2959087930954088081, guid: 98ebcc6ce8acd44a0927a5d8abea142e, type: 3}
   OnSkillActivated:
     m_PersistentCalls:
       m_Calls: []

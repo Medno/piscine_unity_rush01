@@ -12,6 +12,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heal II
       objectReference: {fileID: 0}
+    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+      propertyPath: cost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+      propertyPath: healAmount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+      propertyPath: user
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
+        type: 3}
+      propertyPath: upgrade
+      value: 
+      objectReference: {fileID: 804552099026429590, guid: 322e83bc82dca4be495a0ab0475df330,
+        type: 3}
     - target: {fileID: 6381234391606453926, guid: f59978fa3e37de24da5bbd91deefdd92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,16 +92,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
-        type: 3}
-      propertyPath: cost
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020138681154392126, guid: f59978fa3e37de24da5bbd91deefdd92,
-        type: 3}
-      propertyPath: healAmount
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59978fa3e37de24da5bbd91deefdd92, type: 3}
