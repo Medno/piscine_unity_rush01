@@ -11224,21 +11224,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorePackage
       objectReference: {fileID: 0}
-    - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedDamageable
-      value: 
-      objectReference: {fileID: 1031658770}
-    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
-        type: 3}
-      propertyPath: representedData
-      value: 
-      objectReference: {fileID: 1031658768}
     - target: {fileID: 4198257393773919318, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: representedManaPool
       value: 
       objectReference: {fileID: 1031658764}
+    - target: {fileID: 4198257393773919312, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedData
+      value: 
+      objectReference: {fileID: 1031658768}
+    - target: {fileID: 4198257393773919313, guid: d901bf849e67cc645b6b8222845bdcc0,
+        type: 3}
+      propertyPath: representedDamageable
+      value: 
+      objectReference: {fileID: 1031658770}
     - target: {fileID: 4198257394735160271, guid: d901bf849e67cc645b6b8222845bdcc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11645,6 +11645,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 783120312}
+    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
+      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefreshValues
+      objectReference: {fileID: 0}
     - target: {fileID: 7219731828884883282, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11664,14 +11672,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GameOver
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 783120312}
-    - target: {fileID: 1766119735, guid: 3b44f5081d7354596a88a672f6507e40, type: 3}
-      propertyPath: OnManaSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RefreshValues
       objectReference: {fileID: 0}
     - target: {fileID: 6186382978539314145, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
@@ -11741,14 +11741,8 @@ PrefabInstance:
     - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: skillPoints
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
-        type: 3}
-      propertyPath: activeSkills.Array.data[3]
-      value: 
-      objectReference: {fileID: 4974537795877564636, guid: 5472d3dffc1486643a59b4d5014a4772,
-        type: 3}
     - target: {fileID: 7219731828884883293, guid: 3b44f5081d7354596a88a672f6507e40,
         type: 3}
       propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17304,6 +17298,71 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6247777773977135233, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777775222878978, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777774641365993, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777775065232831, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777775336458728, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777775640390088, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247777775690197369, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800509022559787327, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a70bc5278097c49628f1a468c3735f4c,
+        type: 3}
+    - target: {fileID: 3800509022466944525, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 070c68c65b4b141b98c817c84f006ec2,
+        type: 3}
+    - target: {fileID: 3800509022409361104, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df2c4c4aae5df40849323cb0d9191583,
+        type: 3}
+    - target: {fileID: 3800509021414102024, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27d99e5d965be4cc98f917c781708406,
+        type: 3}
+    - target: {fileID: 3800509021503654393, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eebb855fe675f449b96ad636607faae2,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 574479671, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: db958d94b9d3e4e8b9d7dcfadb8c0d26, type: 3}
