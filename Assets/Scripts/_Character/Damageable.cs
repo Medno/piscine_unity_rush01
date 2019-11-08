@@ -33,7 +33,6 @@ public class Damageable : MonoBehaviour
 		currentHealth = data.maxHP;
 		maxHealth = data.maxHP;
 	}
-
 	public void TakeDamage(int damage, int hitChance)
 	{
 		maxHealth = data.maxHP;

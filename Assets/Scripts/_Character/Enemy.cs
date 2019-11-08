@@ -22,5 +22,7 @@ public class Enemy : Character
 		data.armor += Mathf.RoundToInt(newLevel * armorUpgradeChance / 100);
 		data.constitution += Mathf.RoundToInt(newLevel * constitutionUpgradeChance / 100);
 		data.agility += Mathf.RoundToInt(newLevel * evasionUpgradeChance / 100);
+		GetComponent<Damageable>().maxHealth = data.maxHP;
+		GetComponent<Damageable>().currentHealth = data.maxHP;
 	}
 }

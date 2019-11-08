@@ -42,11 +42,11 @@ public class UserInput : MonoBehaviour
 				player.TriggerSkill(2);
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 				player.TriggerSkill(3);
-			if (Input.GetKeyDown(KeyCode.O))
-				player.makeInvincible();
-			if (Input.GetKeyDown(KeyCode.P))
-				player.forceLevelUp();
 		}
+		if (Input.GetKeyDown(KeyCode.O))
+			player.makeInvincible();
+		if (Input.GetKeyDown(KeyCode.P))
+			player.forceLevelUp();
 	}
 	public void resetPlayerState()
 	{

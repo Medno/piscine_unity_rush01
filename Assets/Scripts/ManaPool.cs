@@ -19,12 +19,6 @@ public class ManaPool : MonoBehaviour
 		currentMana = data.maxMana;
 		maxMana = data.maxMana;
     }
-
-    void Update()
-    {
-		maxMana = data.maxMana;
-    }
-
 	public bool	SpendMana(int amount)
 	{
 		if (amount > currentMana && !infiniteMana)
@@ -38,6 +32,12 @@ public class ManaPool : MonoBehaviour
 		currentMana += amount;
 		if (currentMana > maxMana)
 			currentMana = maxMana;
+		OnManaSet.Invoke(this);
+	}
+
+	public void SetMana(int amount)
+	{
+		currentMana = amount;
 		OnManaSet.Invoke(this);
 	}
 

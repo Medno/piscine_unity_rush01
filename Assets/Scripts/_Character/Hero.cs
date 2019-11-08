@@ -21,27 +21,21 @@ public class Hero : Character
 	[SerializeField] private int skillPointsPerLevel = 1;
 	public GameObject[] activeSkills;
 	public GameObject[] passiveSkills;
-	private void Start()
+	private void Awake()
 	{
 		/* temporary */
 		attributePointsPerLevel = 1;
 		skillPointsPerLevel = 1;
-		foreach (GameObject heroSkill in activeSkills)
-		{
-			heroSkill.GetComponent<ActiveSkill>().user = this.gameObject;
-		}
-		foreach (GameObject heroSkill in passiveSkills)
-		{
-			heroSkill.GetComponent<PassiveSkill>().user = this.gameObject;
-		}
 	}
 
 	public void LevelUp()
 	{
-		OnLevelUp.Invoke(this);
 		data.level += 1;
 		attributePoints += attributePointsPerLevel;
 		skillPoints += skillPointsPerLevel;
+		GetComponent<Damageable>().SetHealth(data.maxHP);
+		GetComponent<ManaPool>().SetMana(data.maxMana);
+		OnLevelUp.Invoke(this);
 	}
 
 	public void GainXP(int amount)

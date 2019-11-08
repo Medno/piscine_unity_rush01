@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60dd56d9412228542b74bc2678b412e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 100
+  strength: 30
   agility: 20
-  constitution: 300
+  constitution: 200
   intelligence: 999
   armor: 40
   level: 30

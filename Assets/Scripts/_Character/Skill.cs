@@ -10,6 +10,7 @@ public class Skill : MonoBehaviour
 	public skillType type;
     [TextArea] public string tooltip = "";
 	public GameObject upgrade;
+	public GameObject user;
 
 	public enum skillType
 	{

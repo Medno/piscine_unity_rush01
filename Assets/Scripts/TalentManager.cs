@@ -20,11 +20,20 @@ public class TalentManager : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(1)) {
-            if (talentSelected == null)
-                talentSelected = Talents.Find(talent => talent.GetComponent<OverItem>().isInsideBox == true);
+            Debug.Log(talentSelected);
+            if (talentSelected == null && (talentSelected = Talents.Find(talent => talent.GetComponent<OverItem>().isInsideBox == true)))
+            {
+                talentSelected.GetComponent<SkillUI>().skillGO.GetComponent<Skill>().user = hero.gameObject;
+                if (talentSelected.GetComponent<SkillUI>().skillGO.GetComponent<Skill>().type == Skill.skillType.Passive)
+                {
+                    talentSelected.GetComponent<SkillUI>().skillGO.GetComponent<PassiveSkill>().Activate();
+                    talentSelected = null;
+                }
+            }
             else
                 slotSelected = Slots.Find(slot => slot.GetComponent<OverSlot>().isInsideBox == true);
-            if (talentSelected != null && slotSelected != null && talentSelected.GetComponent<SkillUI>().skill.level > 0) {
+            if (talentSelected != null && slotSelected != null && talentSelected.GetComponent<SkillUI>().skill.level > 0 &&
+            talentSelected.GetComponent<SkillUI>().skillGO.GetComponent<Skill>().type != Skill.skillType.Passive) {
                 Debug.Log(slotSelected.GetComponent<OverSlot>().index);
                 Debug.Log(talentSelected.GetComponent<SkillUI>());
                 Debug.Log(talentSelected.GetComponent<SkillUI>().skillGO);

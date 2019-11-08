@@ -14,7 +14,6 @@ public class ActiveSkill : Skill
 
 	public int cost = 10;
 	[SerializeField] protected bool debug_activateSkill = false;
-	public GameObject user;
 	public GameObject target;
 	public enum activeSkillType
 	{

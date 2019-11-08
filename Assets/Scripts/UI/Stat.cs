@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Stat : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class Stat : MonoBehaviour
     public TextMeshProUGUI     textValue;
     private Hero      hero;
     public Button   button;
+    [System.Serializable]
+	public class StatUpEvent : UnityEvent<Stat>
+
+	{ }
+    [SerializeField] private StatUpEvent OnStatUp = null;
     void SetValue() {
         if (text.text == "Strength")
             textValue.text = hero.data.strength.ToString();
@@ -62,6 +68,9 @@ public class Stat : MonoBehaviour
             else if (text.text == "Intelligence")
                 hero.data.intelligence += 1;
             SetValue();
+            hero.GetComponent<Damageable>().maxHealth = hero.data.maxHP;
+            hero.GetComponent<ManaPool>().maxMana = hero.data.maxMana;
+            OnStatUp.Invoke(this);
         }
     }
 
